@@ -408,3 +408,5 @@ task :list do
     puts "(use -v or --verbose for more detail)\n\n"
   end
 end
+
+task :default => [:list]
