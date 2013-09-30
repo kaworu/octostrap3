@@ -1,21 +1,32 @@
 ---
 layout: default
+menu: blog
 ---
 
 <div class="blog-index">
   {% assign index = true %}
   {% for post in paginator.posts %}
   {% assign content = post.content %}
-    <article>
+    <article class="post">
       {% include article.html %}
     </article>
   {% endfor %}
-  <div class="pager">
-    <a class="previous {% if paginator.next_page == false %} disabled{% endif %}" href="{{paginator.next_page}}">&larr; Older</a>
-    <a href="/blog/archives">Blog Archives</a>
-    <a class="next{% if paginator.previous_page == false %} disabled{% endif %}" href="{{paginator.previous_page}}">Newer &rarr;</a>
-  </div>
 </div>
+
+<ul class="pager">
+  {% if paginator.next_page %}
+    <li class="previous"><a href="{{paginator.next_page}}">&larr;&nbsp;Older</a></li>
+  {% else %}
+    <li class="previous disabled"><a href="#">&larr;&nbsp;Older</a></li>
+  {% endif %}
+  <li><a href="/blog/archives">Blog Archives</a></li>
+  {% if paginator.previous_page %}
+    <li class="next"><a href="{{paginator.previous_page}}">Newer&nbsp;&rarr;</a></li>
+  {% else %}
+    <li class="next disabled"><a href="#">Newer&nbsp;&rarr;</a></li>
+  {% endif %}
+</ul>
+
 <aside class="sidebar">
   {% if site.blog_index_asides.size %}
     {% include_array blog_index_asides %}
