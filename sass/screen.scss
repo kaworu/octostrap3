@@ -1,0 +1,20 @@
+@import "compass";
+@include global-reset;
+
+body {
+    & > header {
+        form.search {
+            width: 30%;
+            padding: 0;
+        }
+    }
+    #content {
+        padding-top: 60px;
+    }
+    .left {
+        float: left;
+    }
+    .right {
+        float: right;
+    }
+}

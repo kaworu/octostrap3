@@ -10,14 +10,10 @@ layout: default
       {% include article.html %}
     </article>
   {% endfor %}
-  <div class="pagination">
-    {% if paginator.next_page %}
-      <a class="prev" href="{{paginator.next_page}}">&larr; Older</a>
-    {% endif %}
+  <div class="pager">
+    <a class="previous {% if paginator.next_page == false %} disabled{% endif %}" href="{{paginator.next_page}}">&larr; Older</a>
     <a href="/blog/archives">Blog Archives</a>
-    {% if paginator.previous_page %}
-    <a class="next" href="{{paginator.previous_page}}">Newer &rarr;</a>
-    {% endif %}
+    <a class="next{% if paginator.previous_page == false %} disabled{% endif %}" href="{{paginator.previous_page}}">Newer &rarr;</a>
   </div>
 </div>
 <aside class="sidebar">

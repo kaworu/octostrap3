@@ -1,6 +1,46 @@
-<hgroup>
-  <h1><a href="{{ root_url }}/">{{ site.title }}</a></h1>
-  {% if site.subtitle %}
-    <h2>{{ site.subtitle }}</h2>
-  {% endif %}
-</hgroup>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ root_url }}/">{{ site.title }}</a>
+        </div>
+
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="{{ root_url }}/">Blog</a></li>
+                <li><a href="{{ root_url }}/blog/archives">Archives</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="subscribe-rss" href="{{ site.subscribe_rss }}" title="subscribe via RSS">
+                        <img src="{{ root_url }}/images/rss.png" alt="RSS">
+                    </a>
+                </li>
+                {% if site.subscribe_email %}
+                <li>
+                    <a class="subscribe-email" href="{{ site.subscribe_email }}" title="subscribe via email">
+                        <img src="{{ root_url }}/images/email.png" alt="Email">
+                    </a>
+                </li>
+                {% endif %}
+            </ul>
+            {% if site.simple_search %}
+                <form class="search navbar-form navbar-right" action="{{ site.simple_search }}" method="GET">
+                    <input type="hidden" name="q" value="site:{{ site.url | shorthand_url }}">
+                    <div class="input-group">
+                        <input class="form-control" type="text" name="q" placeholder="Search">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            {% endif %}
+        </div>
+    </div>
+</nav>
