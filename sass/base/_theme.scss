@@ -60,6 +60,16 @@ $page-border-bottom: darken($footer-bg, 5) !default;
 
 /* Core theme application */
 
+/* from whiterspace */
+.flex-content { max-width: 100%; height: auto; }
+.basic-alignment {
+  &.left { float: left; margin-right: 1.5em; }
+  &.right { float: right; margin-left: 1.5em; }
+  &.center { display:block; margin: 0 auto 1.5em; }
+  &.left, &.right { margin-bottom: .8em; }
+}
+/* / from whiterspace */
+
 header[role=banner] {
     /* fix email / rss icon for bootstrap navbar */
     .navbar-default .navbar-nav > li img {
@@ -87,6 +97,8 @@ article {
     img.center {
         display: block;
         margin: 0 auto 1.5em;
+        max-width: 100%;
+        height: auto;
     }
 }
 
