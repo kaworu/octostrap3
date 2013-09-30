@@ -13,7 +13,7 @@
     @include box-shadow(lighten($base03, 2) -1px 0 inset);
     text-shadow: lighten($base02, 2) 0 -1px;
   } @else {
-    //background: $base02 $noise-bg !important;
+    background: $base02 $noise-bg !important;
     border-right: 1px solid darken($base03, 2) !important;
     @include box-shadow(lighten($base02, 2) -1px 0 inset);
     text-shadow: darken($base02, 10) 0 -1px;
@@ -31,7 +31,7 @@ figure.code, .gist-file, pre {
 .gist .highlight, figure.code .highlight {
   //@include selection(adjust-color($base03, $lightness: 23%, $saturation: -65%), $text-shadow: $base03 0 1px);
 }
-html .gist .gist-file {
+.gist .gist-file {
   margin-bottom: 1.8em;
   position: relative;
   border: none;
@@ -60,7 +60,7 @@ html .gist .gist-file {
      border: 1px solid $pre-border !important;
      border-top: 1px solid lighten($base03, 2) !important;
    } @else {
-     //background: $base02 $noise-bg;
+     background: $base02 $noise-bg;
    }
    @extend .sans;
    line-height: 1.5em;
@@ -81,38 +81,40 @@ html .gist .gist-file {
     }
   }
 }
-pre {
-  //background: $pre-bg $noise-bg;
-  @include border-radius(.4em);
-  @extend .mono;
-  border: 1px solid $pre-border;
-  line-height: 1.45em;
-  font-size: 13px;
-  margin-bottom: 2.1em;
-  padding: .8em 1em;
-  color: $pre-color;
-  overflow: auto;
-}
-h3.filename {
-  @extend .code-title;
-  + pre { @include border-top-radius(0px); }
-}
+figure.code {
+    pre {
+      //background: $pre-bg $noise-bg;
+      //@include border-radius(.4em);
+      @extend .mono;
+      //border: 1px solid $pre-border;
+      line-height: 1.45em;
+      font-size: 13px;
+      margin-bottom: 2.1em;
+      //padding: .8em 1em;
+      color: $pre-color;
+      overflow: auto;
+    }
+    h3.filename {
+      @extend .code-title;
+      + pre { @include border-top-radius(0px); }
+    }
 
-p, li {
-  code {
-    @extend .mono;
-    display: inline-block;
-    white-space: no-wrap;
-    background: #fff;
-    font-size: .8em;
-    line-height: 1.5em;
-    color: #555;
-    border: 1px solid #ddd;
-    @include border-radius(.4em);
-    padding: 0 .3em;
-    margin: -1px 0;
-  }
-  pre code { font-size: 1em !important; background: none; border: none; }
+    p, li {
+      code {
+        @extend .mono;
+        display: inline-block;
+        white-space: no-wrap;
+        background: #fff;
+        font-size: .8em;
+        line-height: 1.5em;
+        color: #555;
+        border: 1px solid #ddd;
+        @include border-radius(.4em);
+        padding: 0 .3em;
+        margin: -1px 0;
+      }
+      pre code { font-size: 1em !important; background: none; border: none; }
+    }
 }
 
 .pre-code {
@@ -123,7 +125,9 @@ p, li {
   padding: .8em;
   overflow-x: auto;
   line-height: 1.45em;
-  //background: $base03 $noise-bg !important;
+  @if $solarized != light {
+    background: $base03 $noise-bg !important;
+  }
   color: $base1 !important;
   span { color: $base1 !important; }
   span { font-style: normal !important; font-weight: normal !important; }
@@ -225,7 +229,7 @@ figure.code {
   pre { margin-bottom: 0; }
   figcaption {
     position: relative;
-    @extend .code-title;
+    //@extend .code-title;
     a { @extend .download-source; }
   }
   .highlight {
@@ -253,10 +257,10 @@ figure.code {
 
 .download-source {
   position: absolute; right: .8em;
-  @include hover-link;
-  color: #666 !important;
+  //@include hover-link;
+  //color: #666 !important;
   z-index: 1;
-  font-size: 13px;
-  text-shadow: #cbcccc 0 1px 0;
+  //font-size: 13px;
+  //text-shadow: #cbcccc 0 1px 0;
   padding-left: 3em;
 }

@@ -60,27 +60,45 @@ $page-border-bottom: darken($footer-bg, 5) !default;
 
 /* Core theme application */
 
-/*
-a {
-  @include link-colors($link-color, $hover: $link-color-hover, $focus: $link-color-hover, $visited: $link-color-visited, $active: $link-color-active);
-}
-aside.sidebar a {
-  @include link-colors($sidebar-link-color, $hover: $sidebar-link-color-hover, $focus: $sidebar-link-color-hover, $active: $sidebar-link-color-active);
-}
-a {
-  @include transition(color .3s);
+header[role=banner] {
+    /* fix email / rss icon for bootstrap navbar */
+    .navbar-default .navbar-nav > li img {
+        height: 18px;
+    }
 }
 
-html {
-  background: $page-bg image-url('line-tile.png') top left;
+/* plugins do output thoses classes */
+.left {
+    float: left;
 }
-body {
-  > div {
-    background: $sidebar-bg $noise-bg;
-    border-bottom: 1px solid $page-border-bottom;
-    > div {
-      background: $main-bg $noise-bg;
-      border-right: 1px solid $sidebar-border;
+.right {
+    float: right;
+}
+article {
+    img.left, img.right {
+        margin-bottom: .8em;
     }
-  }
-}*/
+    img.left {
+        margin-right: 1.5em;
+    }
+    img.right {
+        margin-left: 1.5em;
+    }
+    img.center {
+        display: block;
+        margin: 0 auto 1.5em;
+    }
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.page-header {
+    p.meta {
+        margin-bottom: 0;
+    }
+    .entry-title {
+        margin-top: 0;
+    }
+}
