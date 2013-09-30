@@ -1,9 +1,13 @@
 /* from whiterspace */
 article {
-  padding-top: 1em;
+  h2 {
+      border-bottom: 1px solid #eee;
+  }
   img, video, .flash-video {
     @extend .flex-content;
     @extend .basic-alignment;
+  }
+  img:not(.no-border) {
     @include shadow-box;
   }
   video, .flash-video { margin: 0 auto 1.5em; }
@@ -26,24 +30,15 @@ article {
     }
   }
   > footer {
-    padding-bottom: 2.5em;
+    padding-bottom: 1em;
     margin-top: 2em;
-    @extend .sans;
     p.meta {
       margin-bottom: .8em;
-      font-size: .85em;
       clear: both;
-      overflow: hidden;
     }
     .byline + time:before, time +time:before, .comments:before, .byline ~ .categories:before {
       @extend .separator;
     }
-  }
-
-}
-article + article {
-  .blog-index & {
-    background: $img-border top left repeat-x;
   }
 }
 

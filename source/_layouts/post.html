@@ -8,7 +8,7 @@ single: true
 <article class="hentry" role="article">
   {% include article.html %}
   <footer>
-    <p class="meta">
+    <p class="meta text-muted">
       {% include post/author.html %}
       {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
       {% include post/categories.html %}
@@ -16,14 +16,16 @@ single: true
     {% unless page.sharing == false %}
       {% include post/sharing.html %}
     {% endunless %}
-    <p class="meta">
-      {% if page.previous.url %}
-        <a class="basic-alignment pull-left" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; {{page.previous.title}}</a>
-      {% endif %}
-      {% if page.next.url %}
-        <a class="basic-alignment pull-right" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">{{page.next.title}} &raquo;</a>
-      {% endif %}
-    </p>
+    {% if page.previous.url or page.next.url %}
+      <ul class="meta text-muted pager">
+        {% if page.previous.url %}
+        <li class="previous"><a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; {{page.previous.title}}</a></li>
+        {% endif %}
+        {% if page.next.url %}
+        <li class="next"><a href="{{page.next.url}}" title="Next Post: {{page.next.title}}">{{page.next.title}} &raquo;</a></li>
+        {% endif %}
+      </ul>
+    {% endif %}
   </footer>
 </article>
 {% if site.disqus_short_name and page.comments == true %}

@@ -84,23 +84,6 @@ header[role=banner] {
 .right {
     float: right;
 }
-article {
-    img.left, img.right {
-        margin-bottom: .8em;
-    }
-    img.left {
-        margin-right: 1.5em;
-    }
-    img.right {
-        margin-left: 1.5em;
-    }
-    img.center {
-        display: block;
-        margin: 0 auto 1.5em;
-        max-width: 100%;
-        height: auto;
-    }
-}
 
 .text-uppercase {
     text-transform: uppercase;
@@ -114,3 +97,12 @@ article {
         margin-top: 0;
     }
 }
+
+/* bottom pager */
+.pager {
+    margin-top: 42px;
+}
+.meta.pager {
+    margin-top: 24px;
+}
+
