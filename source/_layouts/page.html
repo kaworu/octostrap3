@@ -4,23 +4,29 @@ layout: default
 
 <div>
 <article role="article">
-  {% if page.title %}
-  <header class="page-header">
-    <h1 class="entry-title">
-        {% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}
-        {% if page.subtitle %}
-            <small>
-                {% if site.titlecase %}{{ page.subtitle | titlecase }}{% else %}{{ page.subtitle }}{% endif %}
-            </small>
-        {% endif %}
-    </h1>
-    {% if page.date %}<p class="meta">{% include post/date.html %}{{ time }}</p>{% endif %}
-  </header>
-  {% endif %}
-  {{ content }}
+  {% unless page.no_header %}
+    <header class="page-header">
+      {% if page.date %}
+        <p class="meta text-muted text-uppercase">{% include post/date.html %}{{ time }}</p>
+      {% endif %}
+      {% if page.title %}
+        <h1 class="entry-title">
+          {% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}
+          {% if page.subtitle %}
+              <small>
+                  {% if site.titlecase %}{{ page.subtitle | titlecase }}{% else %}{{ page.subtitle }}{% endif %}
+              </small>
+          {% endif %}
+        </h1>
+      {% endif %}
+    </header>
+  {% endunless %}
+  <div class="entry-content">
+    {{ content }}
+  </div>
   {% unless page.footer == false %}
     <footer>
-      {% if page.date or page.author %}<p class="meta">
+      {% if page.date or page.author %}<p class="meta text-muted">
         {% if page.author %}{% include post/author.html %}{% endif %}
         {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
         {% if page.categories %}{% include post/categories.html %}{% endif %}
