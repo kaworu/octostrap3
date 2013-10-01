@@ -1,5 +1,5 @@
 {% if site.github_user %}
-<section class="panel panel-default">
+<section class="panel panel-default clearfix">
   <div class="panel-heading">
       <h3 class="panel-title">GitHub Repos</h3>
   </div>
@@ -7,7 +7,7 @@
     <p class="loading">Status updating...</p>
   </div>
   {% if site.github_show_profile_link %}
-    <div class="gh-profile-link pull-right">
+    <div class="gh-profile-link pull-right text-muted">
       <a href="https://github.com/{{site.github_user}}">@{{site.github_user}}</a> on GitHub
     </div>
   {% endif %}
