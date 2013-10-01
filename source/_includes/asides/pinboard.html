@@ -1,8 +1,12 @@
 {% if site.pinboard_user %}
-<section>
-  <h1>My Pinboard</h1>
-  <ul id="pinboard_linkroll">Fetching linkroll...</ul>
-  <p><a href="http://pinboard.in/u:{{ site.pinboard_user }}">My Pinboard Bookmarks &raquo;</a></p>
+<section class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">My Pinboard</h3>
+  </div>
+  <div class="panel-body">
+    <ul id="pinboard_linkroll">Fetching linkroll...</ul>
+    <p><a href="http://pinboard.in/u:{{ site.pinboard_user }}">My Pinboard Bookmarks &raquo;</a></p>
+  </div>
 </section>
 <script type="text/javascript">
   var linkroll = 'pinboard_linkroll'; //id target for pinboard list

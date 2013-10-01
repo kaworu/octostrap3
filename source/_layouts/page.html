@@ -2,54 +2,57 @@
 layout: default
 ---
 
-<div>
-<article role="article">
-  {% unless page.no_header %}
-    <header class="page-header">
-      {% if page.date %}
-        <p class="meta text-muted text-uppercase">{% include post/date.html %}{{ time }}</p>
-      {% endif %}
-      {% if page.title %}
-        <h1 class="entry-title">
-          {% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}
-          {% if page.subtitle %}
-              <small>
-                  {% if site.titlecase %}{{ page.subtitle | titlecase }}{% else %}{{ page.subtitle }}{% endif %}
-              </small>
+<div class="row">
+  <div {% unless page.sidebar == false or site.page_asides == empty and site.default_asides == empty %}class="col-md-9"{% endunless %}>
+    <article role="article">
+      {% unless page.no_header %}
+        <header class="page-header">
+          {% if page.date %}
+            <p class="meta text-muted text-uppercase">{% include post/date.html %}{{ time }}</p>
           {% endif %}
-        </h1>
-      {% endif %}
-    </header>
-  {% endunless %}
-  <div class="entry-content">
-    {{ content }}
-  </div>
-  {% unless page.footer == false %}
-    <footer>
-      {% if page.date or page.author %}<p class="meta text-muted">
-        {% if page.author %}{% include post/author.html %}{% endif %}
-        {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
-        {% if page.categories %}{% include post/categories.html %}{% endif %}
-      </p>{% endif %}
-      {% unless page.sharing == false %}
-        {% include post/sharing.html %}
+          {% if page.title %}
+            <h1 class="entry-title">
+              {% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}
+              {% if page.subtitle %}
+                  <small>
+                      {% if site.titlecase %}{{ page.subtitle | titlecase }}{% else %}{{ page.subtitle }}{% endif %}
+                  </small>
+              {% endif %}
+            </h1>
+          {% endif %}
+        </header>
       {% endunless %}
-    </footer>
+      <div class="entry-content">
+        {{ content }}
+      </div>
+      {% unless page.footer == false %}
+        <footer>
+          {% if page.date or page.author %}<p class="meta text-muted">
+            {% if page.author %}{% include post/author.html %}{% endif %}
+            {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
+            {% if page.categories %}{% include post/categories.html %}{% endif %}
+          </p>{% endif %}
+          {% unless page.sharing == false %}
+            {% include post/sharing.html %}
+          {% endunless %}
+        </footer>
+      {% endunless %}
+    </article>
+    {% if site.disqus_short_name and page.comments == true %}
+      <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
+      </section>
+    {% endif %}
+  </div>
+
+  {% unless page.sidebar == false or site.page_asides == empty and site.default_asides == empty %}
+    <aside class="sidebar col-md-3">
+      {% if site.page_asides.size %}
+        {% include_array page_asides %}
+      {% else %}
+        {% include_array default_asides %}
+      {% endif %}
+    </aside>
   {% endunless %}
-</article>
-{% if site.disqus_short_name and page.comments == true %}
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
-  </section>
-{% endif %}
 </div>
-{% unless page.sidebar == false %}
-<aside class="sidebar">
-  {% if site.page_asides.size %}
-    {% include_array page_asides %}
-  {% else %}
-    {% include_array default_asides %}
-  {% endif %}
-</aside>
-{% endunless %}
