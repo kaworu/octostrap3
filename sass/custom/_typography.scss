@@ -9,3 +9,13 @@ h1, h2, h3, {
 .entry-content {
     font-size: 17px;
 }
+
+q {
+    font-style: italic;
+    &:before {
+        content: "\201C";
+    }
+    &:after {
+        content: "\201D";
+    }
+}
