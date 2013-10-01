@@ -70,13 +70,6 @@ $page-border-bottom: darken($footer-bg, 5) !default;
 }
 /* / from whiterspace */
 
-header[role=banner] {
-    /* fix email / rss icon for bootstrap navbar */
-    .navbar-default .navbar-nav > li img {
-        height: 18px;
-    }
-}
-
 /* plugins do output thoses classes */
 .left {
     float: left;
@@ -88,21 +81,3 @@ header[role=banner] {
 .text-uppercase {
     text-transform: uppercase;
 }
-
-.page-header {
-    p.meta {
-        margin-bottom: 0;
-    }
-    .entry-title {
-        margin-top: 0;
-    }
-}
-
-/* bottom pager */
-.pager {
-    margin-top: 42px;
-}
-.meta.pager {
-    margin-top: 24px;
-}
-

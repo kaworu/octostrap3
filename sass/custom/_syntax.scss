@@ -9,30 +9,9 @@ body {
             pre {
                 white-space: pre;
             }
-        }
-    }
-}
-/*
-body {
-    figure.code {
-        //@include box-shadow(none);
-        .panel-body {
-            padding: 0;
-
-            .highlight {
-                background-color: inherit;
-
-                code {
-                    background-color: inherit;
-                }
-                .line-numbers {
-                    background: inherit;
-                }
-                pre {
-                    white-space: pre;
-                }
+            .gutter {
+                display: none;
             }
         }
     }
 }
-*/

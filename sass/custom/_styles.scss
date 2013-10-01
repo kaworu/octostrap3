@@ -22,3 +22,8 @@ footer[role=contentinfo] {
         margin-top: 12px;
     }
 }
+
+/* use h2 as separator in posts and page */
+article[role=article] h2 {
+    border-bottom: 1px solid #eee;
+}

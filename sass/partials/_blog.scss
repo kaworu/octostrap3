@@ -1,8 +1,5 @@
 /* from whiterspace */
 article {
-  h2 {
-      border-bottom: 1px solid #eee;
-  }
   img, video, .flash-video {
     @extend .flex-content;
     @extend .basic-alignment;
@@ -47,3 +44,22 @@ article {
   padding: 0 .4em 0 .2em;
   display: inline-block;
 }
+
+/* our own */
+.page-header {
+    p.meta {
+        margin-bottom: 0;
+    }
+    .entry-title {
+        margin-top: 0;
+    }
+}
+
+/* bottom pager */
+.pager {
+    margin-top: 42px;
+}
+.meta.pager {
+    margin-top: 24px;
+}
+
