@@ -38,7 +38,7 @@ module Jekyll
       end
       if markup.strip =~ /(.*)?(\s+|^)(\/*\S+)/i
         @title = $1 || nil
-        @file = $3
+        #@file = $3
       end
       super
     end
