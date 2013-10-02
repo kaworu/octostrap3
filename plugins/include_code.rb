@@ -38,7 +38,7 @@ module Jekyll
       end
       if markup.strip =~ /(.*)?(\s+|^)(\/*\S+)/i
         @title = $1 || nil
-        #@file = $3
+        @file = $3
       end
       super
     end
@@ -58,7 +58,7 @@ module Jekyll
 
       Dir.chdir(code_path) do
         code = file.read
-        @filetype = file.extname.sub('.','') if @filetype.nil?
+        #@filetype = file.extname.sub('.','') if @filetype.nil?
         title = @title ? "#{@title} (#{file.basename})" : file.basename
         url = "/#{code_dir}/#{@file}"
         source = "<figure class='code panel panel-default'><figcaption class='panel-heading'><h3 class='panel-title'>#{title}</h3> <a href='#{url}'>download</a></figcaption>\n"
