@@ -18,13 +18,7 @@ html, body {
 footer[role=contentinfo] {
     height: 60px;
     margin-top: 42px;
-    background-color: #f5f5f5;
     p.credits {
         margin-top: 12px;
     }
-}
-
-/* use h2 as separator in posts and page */
-article[role=article] h2 {
-    border-bottom: 1px solid #eee;
 }

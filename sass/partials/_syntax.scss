@@ -7,8 +7,8 @@
   font-size: 13px;
   line-height: 1.45em;
   @if $solarized == light {
-    //background: lighten($base03, 1) $noise-bg !important;
-    //border-right: 1px solid darken($base02, 2) !important;
+    background: lighten($base03, 1) $noise-bg !important;
+    border-right: 1px solid darken($base02, 2) !important;
     border-right: 1px solid #ddd !important;
     @include box-shadow(lighten($base03, 2) -1px 0 inset);
     text-shadow: lighten($base02, 2) 0 -1px;
@@ -41,9 +41,9 @@ figure.code, .gist-file, pre {
   }
   .gist-syntax {
     border-bottom: 0 !important;
-    //background: none !important;
+    background: none !important;
     .gist-highlight {
-      //background: $base03 !important;
+      background: $base03 !important;
     }
     .highlight pre {
       @extend .pre-code;
@@ -56,7 +56,7 @@ figure.code, .gist-file, pre {
    color: $base01;
    font-size: .7em !important;
    @if $solarized == light {
-     //background: lighten($base03, 2) $noise-bg;
+     background: lighten($base03, 2) $noise-bg;
      border: 1px solid $pre-border !important;
      border-top: 1px solid lighten($base03, 2) !important;
    } @else {
@@ -83,7 +83,7 @@ figure.code, .gist-file, pre {
 }
 figure.code {
     pre {
-      //background: $pre-bg $noise-bg;
+      background: $pre-bg $noise-bg;
       //@include border-radius(.4em);
       @extend .mono;
       //border: 1px solid $pre-border;
@@ -201,7 +201,7 @@ figure.code {
 .highlight, .gist-highlight {
   pre { background: none; @include border-radius(0px); border: none; padding: 0; margin-bottom: 0; }
   margin-bottom: 1.8em;
-  //background: $base03;
+  background: $base03;
   overflow-y: hidden;
   overflow-x: auto;
 }
