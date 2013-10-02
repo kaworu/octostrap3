@@ -1,0 +1,3 @@
+[submodule ".themes/octostrap3"]
+	path = .themes/octostrap3
+	url = git@github.com:kAworu/octostrap3.git
