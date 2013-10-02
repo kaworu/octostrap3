@@ -17,6 +17,15 @@
                 <li {% if page.navbar == 'Archives' %}class="active"{% endif %}>
                     <a href="{{ root_url }}/blog/archives">Archives</a>
                 </li>
+                <li {% if page.navbar == 'Setup' %}class="active"{% endif %}>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Setup <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="{{ root_url }}/setup/install">Installation</a>
+                        <a href="{{ root_url }}/setup/octopatch">Plugins integration</a>
+                      </li>
+                    </ul>
+                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>

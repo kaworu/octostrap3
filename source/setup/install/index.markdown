@@ -1,9 +1,11 @@
 ---
-layout: post
+layout: page
+navbar: Setup
 title: "Installation"
 date: 2013-10-02 19:51
 comments: true
-categories: octopress
+sharing: true
+footer: true
 ---
 
 You can install **Octostrap** like any other Octopress theme. Here is how to do it in a few steps:
@@ -25,5 +27,9 @@ Installing is straightforward, just clone the them and run `rake install`:
     % git clone https://github.com/kAworu/octostrap3.git .themes/octostrap3
     % rake "install[octostrap3]"
 
-And that's it ! You can start blogging if the default theme suits you or read
-the other posts for more awesome customizations :)
+And that's it ! You can start blogging if the default theme suits you or
+continue this setup guid for more awesome customizations :)
+
+<ul class="pager">
+    <li class="next"><a href="{{ root_url }}/setup/octopatch">make Octopress plugins output Bootstrap classes &raquo;</a></li>
+</ul>
