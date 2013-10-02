@@ -2,7 +2,7 @@
 layout: page
 navbar: Setup
 title: "Patching Octopress plugins"
-date: 2013-10-02 21:01:22
+updated: 2013-10-02 21:01:22
 comments: true
 sharing: true
 footer: true

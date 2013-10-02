@@ -2,7 +2,7 @@
 layout: page
 navbar: Setup
 title: "Installation"
-date: 2013-10-02 19:51
+updated: 2013-10-02 19:51
 comments: true
 sharing: true
 footer: true
