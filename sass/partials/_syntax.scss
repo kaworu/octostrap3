@@ -266,3 +266,23 @@ figure.code {
   top: .75em;
   font-size: .8em;
 }
+
+figure.code:not(.panel) {
+    /* unpatched code_block or include_code plugin */
+    border: 1px solid #ddd;
+    @include border-radius(5px);
+    .highlight {
+        border-top: 1px solid #ddd;
+        @include border-radius(5px);
+        @include border-top-radius(0);
+    }
+    figcaption {
+        color: #666;
+        background-color: #f8f8f8;
+        @include border-radius(5px);
+        a {
+            top: .2em;
+        }
+        text-align:center;
+    }
+}
