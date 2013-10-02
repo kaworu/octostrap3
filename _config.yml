@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
+url: http://kAworu.github.io/octopress
 title: My Octopress Blog
 subtitle: A blogging framework for hackers.
 author: Your Name
@@ -16,7 +16,7 @@ description:
 date_format: "ordinal"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
-subscribe_rss: /atom.xml
+subscribe_rss: /octopress/atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
 email:
@@ -26,10 +26,10 @@ email:
 # ----------------------- #
 
 # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
-root: /
+root: /octopress
 permalink: /blog/:year/:month/:day/:title/
 source: source
-destination: public
+destination: public/octopress
 plugins: plugins
 code_dir: downloads/code
 category_dir: blog/categories

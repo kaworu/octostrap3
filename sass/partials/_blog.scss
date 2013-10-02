@@ -1,0 +1,65 @@
+/* from whiterspace */
+article {
+  img, video, .flash-video {
+    @extend .flex-content;
+    @extend .basic-alignment;
+  }
+  img:not(.no-border) {
+    @include shadow-box;
+  }
+  video, .flash-video { margin: 0 auto 1.5em; }
+  video { display: block; width: 100%; }
+  .flash-video {
+    > div {
+      position: relative;
+      display: block;
+      padding-bottom: 56.25%;
+      padding-top: 1px;
+      height: 0;
+      overflow: hidden;
+      iframe, object, embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  > footer {
+    padding-bottom: 1em;
+    margin-top: 2em;
+    p.meta {
+      margin-bottom: .8em;
+      clear: both;
+    }
+    .byline + time:before, time +time:before, .comments:before, .byline ~ .categories:before {
+      @extend .separator;
+    }
+  }
+}
+
+.separator {
+  content: "\2022 ";
+  padding: 0 .4em 0 .2em;
+  display: inline-block;
+}
+
+/* our own */
+.page-header {
+    p.meta {
+        margin-bottom: 0;
+    }
+    .entry-title {
+        margin-top: 0;
+    }
+}
+
+/* bottom pager */
+.pager {
+    margin-top: 42px;
+}
+.meta.pager {
+    margin-top: 24px;
+}
+

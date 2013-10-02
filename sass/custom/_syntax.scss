@@ -1,0 +1,17 @@
+/* boostrap fix & integration */
+body {
+    figure.code {
+        padding: 0;
+        .highlight {
+            code {
+                @include border-radius(0);
+            }
+            pre {
+                white-space: pre;
+            }
+            .gutter {
+                display: none;
+            }
+        }
+    }
+}

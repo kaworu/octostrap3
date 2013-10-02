@@ -1,0 +1,6 @@
+header[role=banner] {
+    /* fix email / rss icon for bootstrap navbar */
+    .navbar-default .navbar-nav > li img {
+        height: 18px;
+    }
+}
