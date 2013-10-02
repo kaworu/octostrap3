@@ -21,9 +21,8 @@ example) you can just clone the
 
 <h2>Theme installation</h2>
 
-Installing is straightforward, just clone the them and run `rake install`:
+Installing is straightforward, just clone the theme and run `rake install`:
 
-    % cd octopress/.themes
     % git clone https://github.com/kAworu/octostrap3.git .themes/octostrap3
     % rake "install[octostrap3]"
 
