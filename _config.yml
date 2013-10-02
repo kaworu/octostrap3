@@ -54,7 +54,7 @@ default_asides: []
 
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.
-blog_index_asides: [asides/what_is_octostrap3.html, asides/recent_posts.html]
+blog_index_asides: [asides/what_is_octostrap3.html, asides/recent_posts.html, asides/github.html]
 post_asides: [asides/recent_posts.html]
 page_asides: []
 
@@ -63,7 +63,7 @@ page_asides: []
 # ----------------------- #
 
 # Github repositories
-github_user:
+github_user: kAworu
 github_repo_count: 4
 github_show_profile_link: true
 github_skip_forks: true
