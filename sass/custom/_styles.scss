@@ -18,3 +18,20 @@ html, body {
 footer[role=contentinfo] {
     height: 60px;
 }
+
+/* fork me on github ribbon */
+#fork-me-on-github {
+    /* bellow 1440~ the ribbon goes over the RSS link :( */
+    display: none;
+    @media only screen and (min-width: 1440px) {
+        display: block;
+    }
+    z-index: 1001;
+    .gh-ribbon {
+        z-index: 1001;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: 0;
+    }
+}
