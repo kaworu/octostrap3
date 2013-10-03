@@ -21,13 +21,15 @@
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a class="subscribe-rss" href="{{ site.subscribe_rss }}" title="subscribe via RSS">
-                        <img src="{{ root_url }}/images/rss.png" alt="RSS">
+                        <span class="visible-xs">RSS</span>
+                        <img class="hidden-xs" src="{{ root_url }}/images/rss.png" alt="RSS">
                     </a>
                 </li>
                 {% if site.subscribe_email %}
                 <li>
                     <a class="subscribe-email" href="{{ site.subscribe_email }}" title="subscribe via email">
-                        <img src="{{ root_url }}/images/email.png" alt="Email">
+                        <span class="visible-xs">Email</span>
+                        <img class="hidden-xs" src="{{ root_url }}/images/email.png" alt="Email">
                     </a>
                 </li>
                 {% endif %}
