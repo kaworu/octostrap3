@@ -30,7 +30,7 @@
     .month { text-transform: uppercase; }
   }
   p { margin-bottom: 1em; }
-  @media only screen and (min-width: 550px) {
+  @media only screen and (min-width: 768px) {
     article { margin-left: 7em; }
     h2 {
       float: left;
