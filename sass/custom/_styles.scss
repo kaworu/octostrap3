@@ -35,3 +35,33 @@ footer[role=contentinfo] {
         border: 0;
     }
 }
+
+/* what is octostrap3 panel */
+$bs3-color: #573d7d;
+$octo-color: #efa400;
+#what-is-octostrap3 {
+    &, h3 {
+        color: white;
+    }
+    a {
+        color: $octo-color;
+        &:hover { color: lighten($octo-color, 12%); }
+    }
+    .panel-heading, & {
+        border-color: $bs3-color;
+        background-color: lighten($bs3-color, 18%);
+    }
+    background: url(../images/bs3-background.png) repeat-y center center fixed;
+    @include background-size(cover);
+    .btn {
+        font-weight: bold;
+        background-color: lighten($bs3-color, 18%);
+        color: $octo-color;
+        border-color: darken($octo-color, 12%);
+        @include transition(color 0.2s ease-in ease-out, background-color 0.2s ease-in ease-out);
+        &:hover {
+            color: $bs3-color;
+            background-color: $octo-color;
+        }
+    }
+}
