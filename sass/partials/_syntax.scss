@@ -1,7 +1,12 @@
 .highlight, html .gist .gist-file .gist-syntax .gist-highlight {
   table td.code { width: 100%; }
   //border: 1px solid $pre-border !important;
+  @include border-radius(5px);
 }
+figcaption + .highlight, html figcaption + .gist .gist-file .gist-syntax .gist-highlight {
+  @include border-top-radius(0);
+}
+
 .highlight .line-numbers, html .gist .gist-file .gist-syntax .highlight .line_numbers {
   text-align: right;
   font-size: 13px;
@@ -9,7 +14,6 @@
   @if $solarized == light {
     background: lighten($base03, 1) $noise-bg !important;
     border-right: 1px solid darken($base02, 2) !important;
-    border-right: 1px solid #ddd !important;
     @include box-shadow(lighten($base03, 2) -1px 0 inset);
     text-shadow: lighten($base02, 2) 0 -1px;
   } @else {
@@ -24,14 +28,18 @@
 }
 
 figure.code, .gist-file, pre {
-  //@include box-shadow(rgba(#000, .06) 0 0 10px);
+  @include box-shadow(rgba(#000, .06) 0 0 10px);
   .highlight pre { @include box-shadow(none); }
 }
 
 .gist .highlight, figure.code .highlight {
-  //@include selection(adjust-color($base03, $lightness: 23%, $saturation: -65%), $text-shadow: $base03 0 1px);
+   @if $solarized == light {
+     @include selection(adjust-color($base00, $lightness: 23%, $saturation: -65%), $text-shadow: $base00 0 1px);
+   } @else {
+     @include selection(adjust-color($base03, $lightness: 23%, $saturation: -65%), $text-shadow: $base03 0 1px);
+   }
 }
-.gist .gist-file {
+html .gist .gist-file {
   margin-bottom: 1.8em;
   position: relative;
   border: none;
@@ -72,7 +80,7 @@ figure.code, .gist-file, pre {
     a[href*='#file'] {
       position: absolute; top: 0; left:0; right:-10px;
       color: #474747 !important;
-      @extend .code-title;
+      //@extend .code-title;
       &:hover { color: $link-color !important; }
     }
     a[href*=raw]{
@@ -80,41 +88,6 @@ figure.code, .gist-file, pre {
       top: .4em;
     }
   }
-}
-figure.code {
-    pre {
-      background: $pre-bg $noise-bg;
-      //@include border-radius(.4em);
-      @extend .mono;
-      //border: 1px solid $pre-border;
-      line-height: 1.45em;
-      font-size: 13px;
-      margin-bottom: 2.1em;
-      //padding: .8em 1em;
-      color: $pre-color;
-      overflow: auto;
-    }
-    h3.filename {
-      @extend .code-title;
-      + pre { @include border-top-radius(0px); }
-    }
-
-    p, li {
-      code {
-        @extend .mono;
-        display: inline-block;
-        white-space: no-wrap;
-        background: #fff;
-        font-size: .8em;
-        line-height: 1.5em;
-        color: #555;
-        border: 1px solid #ddd;
-        @include border-radius(.4em);
-        padding: 0 .3em;
-        margin: -1px 0;
-      }
-      pre code { font-size: 1em !important; background: none; border: none; }
-    }
 }
 
 .pre-code {
@@ -125,9 +98,7 @@ figure.code {
   padding: .8em;
   overflow-x: auto;
   line-height: 1.45em;
-  @if $solarized != light {
-    background: $base03 $noise-bg !important;
-  }
+  background: $base03 $noise-bg !important;
   color: $base1 !important;
   span { color: $base1 !important; }
   span { font-style: normal !important; font-weight: normal !important; }
@@ -201,7 +172,7 @@ figure.code {
 .highlight, .gist-highlight {
   pre { background: none; @include border-radius(0px); border: none; padding: 0; margin-bottom: 0; }
   margin-bottom: 1.8em;
-  background: $base03;
+  background: $base03 $noise-bg;
   overflow-y: hidden;
   overflow-x: auto;
 }
@@ -219,13 +190,13 @@ pre, .highlight, .gist-highlight {
 }
 
 .highlight code { 
-  @extend .pre-code; //background: #000;
+  @extend .pre-code; background: #000;
 }
 figure.code {
   background: none;
   padding: 0;
   //border: 0;
-  //margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
   pre { margin-bottom: 0; }
   figcaption {
     position: relative;
@@ -256,15 +227,14 @@ figure.code {
 }
 
 .download-source {
+  top: 0.9em;
   position: absolute; right: .8em;
-  //@include hover-link;
+  @include hover-link;
   //color: #666 !important;
   z-index: 1;
-  //font-size: 13px;
+  font-size: 13px;
   //text-shadow: #cbcccc 0 1px 0;
   padding-left: 3em;
-  top: .75em;
-  font-size: .8em;
 }
 
 figure.code:not(.panel) {
