@@ -3,6 +3,10 @@
   //border: 1px solid $pre-border !important;
   @include border-radius(5px);
 }
+figcaption + .highlight, html figcaption + .gist .gist-file .gist-syntax .gist-highlight {
+  @include border-top-radius(0);
+}
+
 .highlight .line-numbers, html .gist .gist-file .gist-syntax .highlight .line_numbers {
   text-align: right;
   font-size: 13px;
