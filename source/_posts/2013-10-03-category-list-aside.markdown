@@ -6,7 +6,17 @@ comments: true
 categories: octopress
 ---
 
-Here is the code for the awesome category list you can side in the `aside`.
+The code for the awesome category list you can see in the `aside` right
+<span class="pull-right">here →</span>
+
+It will:
+- display *all* your categories with a post counter (using the `badge` class)
+- highlight when you're on the matching category page
+- be installed in 3 minutes !
+
+<!-- more -->
+
+OK, here is the code:
 
 {% include_code category_list.html %}
 
