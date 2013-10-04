@@ -10,10 +10,13 @@ footer: true
 
 <h2>How to do it</h2>
 
-All you have to do is to download the theme you want and then hack
-`source/_includes/custom/head.html`. As an example, you can already edit it and
-uncomment the Bootstrap default theme `bootstrap-theme.min.css`. Now the only
-question left is how to get a new theme !
+All you have to do is to download the theme you want and then edit
+`source/_includes/custom/head.html`. For example, you can already
+uncomment the Bootstrap default theme `bootstrap-theme.min.css`. Check the
+"[Pick a Theme for Only One Page]({{ root_url }}/blog/2013/10/02/pick-a-theme-for-only-one-page/)"
+post for a complete walkthrough.
+
+Now the only question left is where to get a new theme !
 
 
 <h2>Bootswatch</h2>
@@ -38,7 +41,10 @@ Here is a list of other theme sources:
 
 - [wrapbootstrap](https://wrapbootstrap.com/themes?branch=3.x) has many nice
   themes. You have to pay for any of them but the prices are cheap. I don't
-  know how well they would work though.
+  know how well they would work though. Most themes seems to have been designed
+  for admin panels.
+- [boostrapmaster](http://bootstrapmaster.com) contains a few cheap themes,
+  also mostly designed for admin panels.
 
 <ul class="pager">
     <li class="previous"><a href="{{ root_url }}/setup/octopatch">&laquo; make Octopress plugins output Bootstrap classes</a></li>

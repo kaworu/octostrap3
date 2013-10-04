@@ -9,20 +9,22 @@ categories: octopress
 
 <div data-hide-me="one-page-theme-pick" class="alert alert-info">
     <p>
+      <span class="glyphicon glyphicon-info-sign"></span>
       The magic will only happen when you read the post :)
     </p>
 </div>
 
+As you can see on this page, it is possible to have a different theme for a
+given page or post (this one is the mighty
+[flatty](http://bootswatch.com/flatly/bootstrap.min.css)) !
+
 <!-- more -->
+
 <script>
     jQuery(document).ready(function ($) {
         $('[data-hide-me="one-page-theme-pick"]').hide();
     });
 </script>
-
-As you can see on this page, it is possible to have a different theme for a
-given page or post (this one is the mighty
-[flatty](http://bootswatch.com/flatly/bootstrap.min.css)) !
 
 <h2>The Trick</h2>
 

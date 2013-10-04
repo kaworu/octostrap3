@@ -6,12 +6,24 @@ comments: true
 categories: octopress
 ---
 
-The code for the awesome category list you can see in the `aside` right
-<span class="pull-right">here →</span>
+The code for the awesome category list you can see in the `aside`
+<a href="#" id="category-list-pointer">here</a>.
+
+<script>
+jQuery(document).ready(function ($) {
+    $('#category-list-pointer').click(function (event) {
+        event.preventDefault(); // don't follow href
+        // XXX: ugly, should have an id.
+        var $target = $('h3.panel-title:contains(Categories)').closest('.panel');
+        $target.css({opacity: 0}).animate({opacity: 1}, 700);
+    });
+});
+</script>
 
 It will:
 
-- display *all* your categories with a post counter (using the `badge` class)
+- display *all* your categories with a post counter (using Bootstrap's `badge`
+  class)
 - highlight when you're on the matching category page
 - be installed in 3 minutes !
 
@@ -19,7 +31,7 @@ It will:
 
 <h2>The Trick</h2>
 
-OK, here is the code:
+OK, here it is:
 
 {% include_code category_list.html %}
 

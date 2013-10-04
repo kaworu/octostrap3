@@ -6,16 +6,16 @@ comments: true
 categories: octopress
 ---
 
-Bootstrap [navbar](http://getbootstrap.com/components/#navbar) can have a
-"selected" element which ease navigation. In **Octostrap3** it is possible to
-control which menu is selected on each page or post.
+Bootstrap [navbar](http://getbootstrap.com/components/#navbar) can have an
+"active" element highlighted which ease navigation. In **Octostrap3** it is
+possible to control which menu is selected on each page or post.
 
 <!-- more -->
 
 
 <h2>The Trick</h2>
 
-We will use again a
+We will use (again) a
 [front-matter variable](http://jekyllrb.com/docs/frontmatter/). If you check in
 `source/_includes/custom/navigation.html` the menu looks like this:
 {% codeblock source/_includes/custom/navigation.html %}
