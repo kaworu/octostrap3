@@ -5,25 +5,3 @@ $mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace 
 .sans { font-family: $sans; }
 .serif { font-family: $serif; }
 .mono { font-family: $mono; }
-
-h1, h2, h3 {
-    margin-top: 32px;
-    margin-bottom: 12px;
-}
-h1, h2, h3, {
-    font-weight: bold;
-}
-
-.entry-content {
-    font-size: 17px;
-}
-
-q {
-    font-style: italic;
-    &:before {
-        content: "\201C";
-    }
-    &:after {
-        content: "\201D";
-    }
-}
