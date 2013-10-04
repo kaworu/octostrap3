@@ -58,7 +58,7 @@ default_asides: [
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.
 blog_index_asides: [
-    asides/what_is_octostrap3.html,
+    custom/asides/what_is_octostrap3.html,
     asides/recent_posts.html,
     custom/asides/category_list.html,
     asides/github.html
