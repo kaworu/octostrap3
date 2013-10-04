@@ -20,7 +20,7 @@ OK, here is the code:
 
 {% include_code category_list.html %}
 
-Put it in the `source/_includes/asides` directory and then adapt your
+Put it in the `source/_includes/custom/asides` directory and then adapt your
 `_config.yml` accordingly. As example, here is how it is done on this site:
 
 {% codeblock _config.yml lang:yaml %}
@@ -29,7 +29,7 @@ Put it in the `source/_includes/asides` directory and then adapt your
 # To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
 default_asides: [
     asides/recent_posts.html,
-    asides/category_list.html
+    custom/asides/category_list.html
 ]
 
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
@@ -37,7 +37,7 @@ default_asides: [
 blog_index_asides: [
     asides/what_is_octostrap3.html,
     asides/recent_posts.html,
-    asides/category_list.html,
+    custom/asides/category_list.html,
     asides/github.html
 ]
 # post_asides:
