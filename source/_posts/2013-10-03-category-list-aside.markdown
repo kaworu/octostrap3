@@ -10,11 +10,14 @@ The code for the awesome category list you can see in the `aside` right
 <span class="pull-right">here →</span>
 
 It will:
+
 - display *all* your categories with a post counter (using the `badge` class)
 - highlight when you're on the matching category page
 - be installed in 3 minutes !
 
 <!-- more -->
+
+<h2>The Trick</h2>
 
 OK, here is the code:
 
