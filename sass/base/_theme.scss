@@ -68,15 +68,6 @@ $page-border-bottom: darken($footer-bg, 5) !default;
   &.center { display:block; margin: 0 auto 1.5em; }
   &.left, &.right { margin-bottom: .8em; }
 }
-/* / from whiterspace */
-
-/* plugins do output thoses classes */
-.left {
-    float: left;
-}
-.right {
-    float: right;
-}
 
 .text-uppercase {
     text-transform: uppercase;
