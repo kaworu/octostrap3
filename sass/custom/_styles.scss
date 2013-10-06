@@ -47,21 +47,26 @@ $octo-color: #efa400;
         color: $octo-color;
         &:hover { color: lighten($octo-color, 12%); }
     }
-    .panel-heading, & {
+    .panel-heading {
         border-color: $bs3-color;
         background-color: lighten($bs3-color, 18%);
+        background-image: linear-gradient(color-stops(lighten($bs3-color, 18%), lighten($bs3-color, 6%)));
     }
+    border-color: $bs3-color;
     background: url(../images/bs3-background.png) repeat-y center center fixed;
     @include background-size(cover);
     .btn {
+        text-shadow: none;
         font-weight: bold;
         background-color: lighten($bs3-color, 18%);
+        background-image: linear-gradient(color-stops(lighten($bs3-color, 18%), lighten($bs3-color, 6%)));
         color: $octo-color;
         border-color: darken($octo-color, 12%);
         @include transition(color 0.2s ease-in ease-out, background-color 0.2s ease-in ease-out);
         &:hover {
             color: $bs3-color;
             background-color: $octo-color;
+            background-image: linear-gradient(color-stops(lighten($octo-color, 8%), $octo-color));
         }
     }
     .octostrap3-logo {
