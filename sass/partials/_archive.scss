@@ -10,7 +10,6 @@
     &:last-child {
       background: none;
     }
-    footer { padding: 0; margin: 0;}
   }
   h1 { margin-bottom: .3em; }
   h2 {
@@ -18,7 +17,6 @@
     display: none;
   }
   h1 {
-    font-size: 1.5em;
     a {
       font-weight: normal;
       display: inline-block;
@@ -29,30 +27,18 @@
     .month, .day { display: inline-block; }
     .month { text-transform: uppercase; }
   }
-  p { margin-bottom: 1em; }
   @media only screen and (min-width: 768px) {
     article { margin-left: 7em; }
     h2 {
       float: left;
-      margin-top: 1.5em;
+      margin-top: 1.8em;
       font-weight: normal;
       display: inline-block;
       position: relative;
     }
-    time {
-      position: absolute;
-      text-align: right;
-      left: 0em;
-      top: 3.2em;
-    }
     .year { display: none; }
     article {
-      padding:{left: 4.5em; bottom: .7em;}
-      footer {
-          position: absolute;
-          right: 0;
-          bottom: 1.4em;
-      }
+      padding:{bottom: .7em;}
     }
   a.category {
     line-height: 1.1em;

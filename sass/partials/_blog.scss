@@ -33,9 +33,6 @@ article {
       margin-bottom: .8em;
       clear: both;
     }
-    .byline + time:before, time +time:before, .comments:before, .byline ~ .categories:before {
-      @extend .separator;
-    }
   }
 }
 
