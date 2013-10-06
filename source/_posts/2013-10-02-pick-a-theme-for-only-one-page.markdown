@@ -16,7 +16,7 @@ categories: octopress
 
 As you can see on this page, it is possible to have a different theme for a
 given page or post (this one is the mighty
-[flatty](http://bootswatch.com/flatly/bootstrap.min.css)) !
+[flatty](http://bootswatch.com/flatly/bootstrap.min.css))&nbsp;!
 
 <!-- more -->
 
