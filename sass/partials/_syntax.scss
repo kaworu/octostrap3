@@ -91,6 +91,7 @@ html .gist .gist-file {
 }
 
 .pre-code {
+  white-space: pre;
   font-family: $mono !important;
   overflow: scroll;
   overflow-y: hidden;
