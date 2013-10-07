@@ -37,8 +37,8 @@ select the theme to use. First, adapt `source/_includes/custom/head.html`:
   <link href="{{ page.bootstrap_theme_url }}" rel="stylesheet" type="text/css">
 {% else %}
   <link href="{{ root_url }}/javascripts/libs/bootstrap-3.0.0/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="{{ root_url }}/javascripts/libs/bootstrap-3.0.0/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
 {% endif %}
-<!-- <link href="{{ root_url }}/javascripts/libs/bootstrap-3.0.0/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"> -->
 <link href="{{ root_url }}/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 {% endraw %}
 {% endcodeblock %}
