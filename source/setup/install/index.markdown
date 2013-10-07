@@ -8,7 +8,16 @@ sharing: true
 footer: true
 ---
 
-You can install **Octostrap** like any other Octopress theme. Here is how to do it in a few steps:
+<div class="alert alert-info">
+<p>
+    <strong>Octostrap3</strong> is compatible with Octopress 2.0
+    (<a href="https://github.com/imathis/octopress">
+    master branch</a> on GitHub), the same version that is documented at
+    <a href="http://octopress.org">octopress.org</a>. There is no support for
+    other Octopress version at the moment.
+</div>
+You can install **Octostrap3** like any other Octopress theme. Here is how to
+do it in a few steps:
 
 <h2>Octopress Installation</h2>
 
