@@ -1,8 +1,3 @@
-- We're based of Octopress's classic theme, see https://github.com/imathis/octopress/blob/master/README.markdown
-- We've copied stuff from the Octopress whiterspace theme, see https://github.com/mjhea0/whiterspace
-- We ship jQuery, see source/javascripts/libs/jquery/MIT-LICENSE.txt
-- We ship Twitter Bootstrap, see source/javascripts/libs/bootstrap-3.x.x/LICENSE
-
 The MIT License (MIT)
 
 Copyright (c) 2013 Alexandre Perrin
