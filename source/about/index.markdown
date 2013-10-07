@@ -12,6 +12,19 @@ footer: true
 [on my blog](https://kaworu.ch) and all Octopress themes were based on
 Bootstrap 2.x.
 
+<h2>Contributing</h2>
+
+For issues, questions and pull requests check
+[the GitHub repository](https://github.com/kAworu/octostrap3).
+
+<h2>License</h2>
+
+Just as Octopress **Octostrap3** is under the MIT License.
+
+Note that **Twitter Bootstrap**, which is included in the theme,
+is licensed under the
+[Apache License v2.0](https://github.com/twbs/bootstrap/blob/master/LICENSE).
+
 <h2>Kudos</h2>
 
 - [Twitter Bootstrap](http://getbootstrap.com/) for the CSS & Javascript magic
