@@ -11,8 +11,8 @@ footer: true
 <h2>How to do it</h2>
 
 All you have to do is to download the theme you want and then edit
-`source/_includes/custom/head.html`. For example, you can already
-uncomment the Bootstrap default theme `bootstrap-theme.min.css`. Check the
+`source/_includes/custom/head.html`. For example, you can
+comment the Bootstrap default theme `bootstrap-theme.min.css`. Check the
 "[Pick a Theme for Only One Page]({{ root_url }}/blog/2013/10/02/pick-a-theme-for-only-one-page/)"
 post for a complete walkthrough.
 
