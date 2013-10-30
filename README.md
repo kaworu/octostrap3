@@ -8,10 +8,12 @@ question.
 Install
 =======
 
+```
   $ cd octopress
   $ git clone https://github.com/kAworu/octostrap3 .themes/octostrap3
   $ rake install['octostrap3']
   $ rake generate
+```
 
 Octopress version
 =================
