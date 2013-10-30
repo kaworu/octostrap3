@@ -5,6 +5,14 @@ Twitter Bootstrap 3 theme for Octopress ! Check
 http://kaworu.github.io/octopress/ for installation, customization, example and
 question.
 
+Install
+=======
+
+  $ cd octopress
+  $ git clone https://github.com/kAworu/octostrap3 .themes/octostrap3
+  $ rake install['octostrap3']
+  $ rake generate
+
 Octopress version
 =================
 
