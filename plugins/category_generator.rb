@@ -135,9 +135,8 @@ ERR
     end
 
     def downcase_categories(categories)
-        downcase_categories = {}
+        downcase_categories = Hash.new(Array.new)
         categories.each do |k, v|
-          downcase_categories[k.downcase] ||= []
           downcase_categories[k.downcase] += v
         end
         downcase_categories
