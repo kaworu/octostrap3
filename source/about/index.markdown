@@ -40,6 +40,9 @@ Just as Octopress **Octostrap3** is under the MIT License.
         will available be under MIT</a>
 </div>
 
+All **the content on this blog** is under a Creative Commons license
+[CC-BY-3.0](http://creativecommons.org/licenses/by/3.0/).
+
 <h2>Kudos</h2>
 
 - [Twitter Bootstrap](http://getbootstrap.com/) for the CSS & Javascript magic
