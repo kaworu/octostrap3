@@ -1,12 +1,13 @@
 octostrap3
 ===========
 
-Twitter Bootstrap 3 theme for Octopress ! Check
-http://kaworu.github.io/octopress/ for installation, customization, example and
-question.
+Twitter Bootstrap 3 theme for Octopress ! Check **the demo**
+http://kaworu.github.io/octopress/ for setup instructions, customization and examples.
 
-Install
-=======
+You can get the demo's source here: https://github.com/kAworu/octopress/tree/octostrap3-demo
+
+Quick install
+=============
 
 ```
   % cd octopress
@@ -19,5 +20,5 @@ Octopress version
 =================
 
 This theme is compatible with Octopress 2.0,
-the `master` branch from https://github.com/imathis/octopress,
-documented at http://octopress.org/.
+the `master` branch from https://github.com/imathis/octopress
+(documented at http://octopress.org/).
