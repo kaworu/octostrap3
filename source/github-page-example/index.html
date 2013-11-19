@@ -7,6 +7,8 @@ sharing: true
 footer: true
 ---
 
+<!-- stolen and hacked from http://carlboettiger.info/software.html -->
+
 <style>
 /* don't display the page header, we use a *huge* jumbotron in the content. */
 header.page-header {
@@ -20,8 +22,8 @@ header.page-header {
         This is an automated index to GitHub repositories for my open
         source research projects and software packages.
     </p>
-    <p>
-        <a class="btn btn-primary btn-lg" role="button" href="https://github.com/{{ site.github_user }}/">
+    <p class="clearfix">
+        <a class="btn btn-primary btn-lg pull-right" role="button" href="https://github.com/{{ site.github_user }}/">
             my GitHub profile »
         </a>
     </p>
@@ -89,7 +91,7 @@ header.page-header {
     $item.find('.name').attr("href", repo.html_url).text(repo.name);
 
     $item.find('.time').text(strftime("%h %e, %Y", repo.pushed_at));
-    $item.find('.open_issues').text(repo.open_issues + " open_issues");
+    $item.find('.open_issues').text(repo.open_issues + " issues");
     $item.find('.watchers').text(repo.watchers + " watchers");
     $item.find('.forks').text(repo.forks + " forks");
 
@@ -98,37 +100,25 @@ header.page-header {
 
   function addRepo(repo) {
       var $item = $(
-          '<div class="repo col-md-6">' +
+          '<div class="repo col-md-4 col-sm-6">' +
               '<div class="panel panel-default">' +
-                  '<h2 class="name"></h2>' +
-                  '<p class="meta text-muted pull-right">' +
-                      '<small>' +
-                          '<span class="glyphicon glyphicon-calendar"></span> <span class="time"></span><br>' +
-                          '<span class="glyphicon glyphicon-exclamation-sign"></span> <span class="open_issues"></span><br>' +
-                          '<span class="glyphicon glyphicon-eye-open"></span> <span class="watchers"></span><br>' +
-                          '<span class="glyphicon glyphicon-cutlery"></span> <span class="forks"></span> ' +
-                      '</small>' +
-                  '</p>' +
-                  '<h3 class="language"></h3>' +
-                  '<p class="description"></p>' +
-                  '<p><a class="btn btn-default pull-right gh-repo-link" role="button">View on GitHub »</a></p>' +
-              '</div>'
+                  '<div class="panel-heading">' +
+                      '<a class="gh-repo-link name" role="button"></a>' +
+                      '<span class="language label label-default meta pull-right">' +
+                      '</span>' +
+                  '</div>' +
+                  '<div class="panel-body">' +
+                      '<p class="description"></p>' +
+                  '</div>' +
+              '</div>' +
           '</div>'
       );
 
-    $item.find('div.repo').addClass((repo.language || '').toLowerCase());
-
-    $item.find('.time').text(strftime("%h %e, %Y", repo.pushed_at));
-    $item.find('.open_issues').text(repo.open_issues + " open_issues");
-    $item.find('.watchers').text(repo.watchers + " watchers");
-    $item.find('.forks').text(repo.forks + " forks");
-
+    $item.find('.repo').addClass((repo.language || '').toLowerCase());
     $item.find('.name').text(repo.name);
-    $item.find('.language').text(repo.language);
-
-    $item.find('.description').text(repoDescription(repo));
-
     $item.find('a.gh-repo-link').attr("href", repoUrl(repo));
+    $item.find('.language').text(repo.language);
+    $item.find('.description').text(repoDescription(repo));
 
     $item.appendTo("#repos");
   }
