@@ -5,7 +5,7 @@ single: true
 ---
 
 <div class="row">
-  <div class="page-content {% unless page.sidebar == false or site.post_asides == empty and site.default_asides == empty %}col-md-9{% endunless %}">
+  <div class="page-content {% unless page.sidebar == false or site.post_asides == empty and site.default_asides == empty %}col-md-9{% else %}col-md-12{% endunless %}">
     <article class="hentry" role="article">
       {% include article.html %}
       <footer>

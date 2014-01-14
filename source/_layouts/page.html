@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="row">
-  <div class="page-content {% unless page.sidebar == false or site.page_asides == empty and site.default_asides == empty %}col-md-9{% endunless %}">
+  <div class="page-content {% unless page.sidebar == false or site.page_asides == empty and site.default_asides == empty %}col-md-9{% else %}col-md-12{% endunless %}">
     <article role="article">
       {% unless page.no_header %}
         <header class="page-header">
