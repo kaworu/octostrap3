@@ -29,25 +29,6 @@ content on this blog is under a Creative Commons license
 
 Just as Octopress **Octostrap3** is under the MIT License.
 
-<div class="alert alert-warning">
-    <p>
-        <span class="glyphicon glyphicon-warning-sign"></span>
-        Note that <strong>Twitter Bootstrap</strong>, which is included in the
-        theme, is licensed under the
-        <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">Apache
-        License v2.0</a>.
-        This can raise some incompatibilities (notably with the GPLv2, see
-        <a href="https://github.com/twbs/bootstrap/issues/2054">twbs/bootstrap#2054</a>)
-        so care must be taken when sublicensing.
-</div>
-<div class="alert alert-info">
-    <p>
-        <span class="glyphicon glyphicon-info-sign"></span>
-        It looks like
-        <a href="https://github.com/twbs/bootstrap/pull/9994">Boostrap v3.1
-        will available be under MIT</a>
-</div>
-
 <h2>Kudos</h2>
 
 - [Twitter Bootstrap](http://getbootstrap.com/) for the CSS & Javascript magic
