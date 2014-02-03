@@ -36,8 +36,8 @@ theme.
     <p>
       <span class="glyphicon glyphicon-info-sign"></span>
       Theses patches were tested against the latest version of Octopress
-      master's branch at the time of writting:<br>
-      commit <strong>4cc76820331b2b327c03d27216e79bc55a58c505</strong>
+      master's branch at the time of writting (03 Feb 2014):<br>
+      commit <strong>fe6ef744ede363688e8538ac091519e00c30487c</strong>
     </p>
 </div>
 
@@ -47,9 +47,9 @@ theme.
 Both the `codeblock` and `include_code` liquid tags have been styled in this
 theme so their header looks a lot like Bootstrap's
 [panels](http://getbootstrap.com/components/#panels). However, they don't
-actually output Bootstrap's classes. The default is fine as long as you're not
-going to change of Bootstrap theme. Here are the two versions (check the
-markup):
+actually output Bootstrap's classes. The default is fine as long as you're using
+the default Bootstrap theme (as this blog) or no theme at all. Here are the two
+versions (check the markup):
 
 not patched:
 

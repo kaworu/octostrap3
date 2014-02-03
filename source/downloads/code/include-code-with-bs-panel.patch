@@ -1,5 +1,5 @@
 diff --git a/plugins/include_code.rb b/plugins/include_code.rb
-index 220466b..cea125a 100644
+index 41f3033..8ef234e 100644
 --- a/plugins/include_code.rb
 +++ b/plugins/include_code.rb
 @@ -61,7 +61,7 @@ module Jekyll
@@ -8,6 +8,6 @@ index 220466b..cea125a 100644
          url = "/#{code_dir}/#{@file}"
 -        source = "<figure class='code'><figcaption><span>#{title}</span> <a href='#{url}'>download</a></figcaption>\n"
 +        source = "<figure class='code panel panel-default'><figcaption class='panel-heading'><h3 class='panel-title'>#{title}</h3> <a href='#{url}'>download</a></figcaption>\n"
-         source += " #{highlight(code, @filetype)}</figure>"
+         source += "#{highlight(code, @filetype)}</figure>"
          safe_wrap(source)
        end

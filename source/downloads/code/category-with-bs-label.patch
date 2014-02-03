@@ -1,5 +1,5 @@
 diff --git a/plugins/category_generator.rb b/plugins/category_generator.rb
-index a49c429..2028919 100644
+index c55d62f..5e7ead4 100644
 --- a/plugins/category_generator.rb
 +++ b/plugins/category_generator.rb
 @@ -161,7 +161,7 @@ ERR
