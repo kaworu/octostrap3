@@ -56,8 +56,8 @@ desc "Generate jekyll site"
 task :generate do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "## Generating Site with Jekyll"
-  system "compass compile --css-dir #{source_dir}/stylesheets"
-  system "jekyll" or abort "An error occurred generating the site."
+  system "compass compile"
+  system "jekyll"
 end
 
 desc "Watch the site and regenerate when it changes"
@@ -79,12 +79,7 @@ desc "preview the site in a web browser"
 task :preview do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "Starting to watch source with Jekyll and Compass. Starting Rack on port #{server_port}"
-<<<<<<< HEAD
-  system "compass compile --css-dir #{source_dir}/stylesheets" unless File.exist?("#{source_dir}/stylesheets/screen.css")
-  jekyllPid = Process.spawn({"OCTOPRESS_ENV"=>"preview"}, "jekyll build --watch")
-=======
   jekyllPid = Process.spawn({"OCTOPRESS_ENV"=>"preview"}, "jekyll --auto")
->>>>>>> Removed redundant `compass compile` commands Refs #1512
   compassPid = Process.spawn("compass watch")
   rackupPid = Process.spawn("rackup --port #{server_port}")
 
@@ -259,13 +254,8 @@ desc "deploy public directory to github pages"
 multitask :push do
   puts "## Deploying branch to Github Pages "
   puts "## Pulling any updates from Github Pages "
-<<<<<<< HEAD
-  cd "#{deploy_dir}" do 
-    Bundler.with_clean_env { system "git pull" }
-=======
   cd "#{deploy_dir}" do
-    system "git pull"
->>>>>>> Removed redundant `compass compile` commands Refs #1512
+    Bundler.with_clean_env { system "git pull" }
   end
   (Dir["#{deploy_dir}/*"]).each { |f| rm_rf(f) }
   Rake::Task[:copydot].invoke(public_dir, deploy_dir)
