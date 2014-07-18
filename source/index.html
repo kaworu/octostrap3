@@ -5,11 +5,11 @@ navbar: Blog
 
 <div class="row">
   <div class="page-content {% unless site.default_asides == empty and site.blog_index_asides == empty %}col-md-9{% else %}col-md-12{% endunless %}">
-    <div class="blog-index">
+    <div class="blog-index" itemscope itemtype="http://schema.org/Blog">
       {% assign index = true %}
       {% for post in paginator.posts %}
       {% assign content = post.content %}
-        <article class="post">
+        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
           {% include article.html %}
         </article>
       {% endfor %}

@@ -4,15 +4,15 @@
       <p class="meta text-muted text-uppercase">
         {% include post/date.html %}{{ time }}
         {% if site.disqus_short_name and page.comments != false and post.comments != false and site.disqus_show_comment_count == true %}
-           | <a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread"
+           | <a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread" itemprop="discussionUrl"
              data-disqus-identifier="{% if post.meta.disqus_id %}{{ post.meta.disqus_id }}{% else %}{{ site.url }}{{ post.url }}{% endif %}">Comments</a>
         {% endif %}
       </p>
     {% endunless %}
     {% if index %}
-      <h1 class="entry-title"><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
+      <h1 class="entry-title" itemprop="name headline"><a href="{{ root_url }}{{ post.url }}" itemprop="url">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
     {% else %}
-    <h1 class="entry-title">
+    <h1 class="entry-title" itemprop="name headline">
         {% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}
         {% if page.subtitle %}
             <small>
@@ -24,7 +24,7 @@
   </header>
 {% endunless %}
 {% if index %}
-  <div class="entry-content clearfix">{{ content | excerpt }}</div>
+  <div class="entry-content clearfix" itemprop="articleBody description">{{ content | excerpt }}</div>
   {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
   {% if excerpted == 'true' %}
     <footer>
@@ -32,5 +32,5 @@
     </footer>
   {% endif %}
 {% else %}
-<div class="entry-content clearfix">{{ content }}</div>
+<div class="entry-content clearfix" itemprop="articleBody">{{ content }}</div>
 {% endif %}
