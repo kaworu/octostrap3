@@ -1,5 +1,5 @@
 {% capture category %}{{ post.categories | size }}{% endcapture %}
-<h1 itemprop="name headline"><a href="{{ root_url }}{{ post.url }}" itemprop="url">{{post.title}}</a></h1>
+<h1 itemprop="name headline"><a href="{{ root_url }}{{ post.url }}" itemprop="url">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
 <p class="meta text-muted">
   {% include post/date.html %}{{ time }}
   {% include post/categories.html %}
