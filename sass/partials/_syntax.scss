@@ -11,7 +11,6 @@ figcaption + .highlight {
 }
 
 .highlight .line-numbers, .gist-file .line-numbers {
-  display: none; // XXX
   text-align: right;
   font-size: 13px;
   line-height: 1.45em;
@@ -27,7 +26,7 @@ figcaption + .highlight {
     text-shadow: darken($base02, 10) 0 -1px;
   }
   span { color: $base01 !important; }
-  padding: .8em !important;
+  padding: 1em .8em .8em .8em !important;
   @include border-radius(0);
 }
 
@@ -269,7 +268,7 @@ figure.code:not(.panel), .gist {
         @include border-radius(5px);
         span, a[href*='#file'] {
             font-size: 16px;
-            line-height: 1.1;
+            line-height: 1.45em;
             font-weight: bold;
         }
     }
