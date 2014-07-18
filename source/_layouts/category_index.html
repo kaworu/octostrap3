@@ -11,7 +11,7 @@ navbar: Archives
   {% assign year = this_year %}
   <h2>{{ year }}</h2>
 {% endunless %}
-<article class="page-header">
+<article class="page-header" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
   {% include archive_post.html %}
 </article>
 {% endfor %}
