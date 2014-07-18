@@ -21,7 +21,7 @@ For Octostrap3 issues, questions and pull requests check
 The source of this blog is also available
 [here](https://github.com/kAworu/octopress/tree/octostrap3-demo).  All the
 content on this blog is under a Creative Commons license
-[CC-BY-3.0](http://creativecommons.org/licenses/by/3.0/).
+[CC-BY-4.0](http://creativecommons.org/licenses/by/4.0/).
 </small>
 
 
