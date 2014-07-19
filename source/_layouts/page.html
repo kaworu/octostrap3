@@ -4,14 +4,14 @@ layout: default
 
 <div class="row">
   <div class="page-content {% unless page.sidebar == false or site.page_asides == empty and site.default_asides == empty %}col-md-9{% else %}col-md-12{% endunless %}">
-    <article role="article" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+    <article role="article">
       {% unless page.no_header %}
         <header class="page-header">
           {% if page.date %}
             <p class="meta text-muted text-uppercase">{% include post/date.html %}{{ time }}</p>
           {% endif %}
           {% if page.title %}
-            <h1 class="entry-title" itemprop="name headline">
+            <h1 class="entry-title">
               {% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}
               {% if page.subtitle %}
                   <small>
@@ -22,7 +22,7 @@ layout: default
           {% endif %}
         </header>
       {% endunless %}
-      <div class="entry-content" itemprop="articleBody">
+      <div class="entry-content">
         {{ content }}
       </div>
       {% unless page.footer == false %}
