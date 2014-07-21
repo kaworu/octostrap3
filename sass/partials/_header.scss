@@ -1,6 +1,10 @@
-header[role=banner] {
+header[role=banner] .navbar {
     /* fix email / rss icon for bootstrap navbar */
-    .navbar-default .navbar-nav > li img {
+    li img {
         height: 18px;
+    }
+    a.subscribe-rss, a.subscribe-email {
+        padding-top: 0.9em;
+        padding-bottom: 0.9em;
     }
 }
