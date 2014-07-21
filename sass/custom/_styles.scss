@@ -20,7 +20,7 @@ footer[role=contentinfo] {
 }
 
 /* fork me on github ribbon */
-#fork-me-on-github {
+#fork-me-on-github-ribbon {
     /* bellow 1440~ the ribbon goes over the RSS link :( */
     display: none;
     @media only screen and (min-width: 1440px) {
@@ -33,6 +33,11 @@ footer[role=contentinfo] {
         top: 0;
         right: 0;
         border: 0;
+    }
+}
+#fork-me-on-github-logo-wrapper {
+    @media only screen and (min-width: 1440px) {
+        display: none;
     }
 }
 
