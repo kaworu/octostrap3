@@ -4,8 +4,8 @@
   </div>
   <div class="list-group">
     {% for category in site.categories %}
-    {% capture category_url %}{{ site.category_dir }}/{{ category | first | slugize | downcase | replace:' ','-' | append:'/index.html'}}{% endcapture %}
-    <a class="list-group-item {% if category_url == page.url %}active{% endif %}" href="{{ root_url | append:'/' | append:category_url }}">
+    {% capture category_url %}/{{ site.category_dir }}/{{ category | first | slugize | downcase | replace:' ','-' | append:'/index.html'}}{% endcapture %}
+    <a class="list-group-item {% if category_url == page.url %}active{% endif %}" href="{{ root_url | append:category_url }}">
         <span class="badge">{{ category | last | size }}</span>
         {{ category | first }}
       </a>
