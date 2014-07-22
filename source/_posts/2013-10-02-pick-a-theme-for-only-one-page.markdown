@@ -32,6 +32,7 @@ We will use a [front-matter variable](http://jekyllrb.com/docs/frontmatter/) to
 select the theme to use. First, adapt `source/_includes/custom/head.html`:
 
 {% codeblock source/_includes/custom/head.html %}
+...
 {% raw %}
 {% if page.bootstrap_theme_url %}
   <link href="{{ page.bootstrap_theme_url }}" rel="stylesheet" type="text/css">
@@ -39,8 +40,8 @@ select the theme to use. First, adapt `source/_includes/custom/head.html`:
   <link href="{{ root_url }}/assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="{{ root_url }}/assets/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
 {% endif %}
-<link href="{{ root_url }}/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 {% endraw %}
+...
 {% endcodeblock %}
 
 Now, the Bootstrap theme will be choosen depending on
