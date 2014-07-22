@@ -5,6 +5,9 @@ navbar: Blog
 
 <div class="row">
   <div class="page-content {% unless site.default_asides == empty and site.blog_index_asides == empty %}col-md-9{% else %}col-md-12{% endunless %}">
+    <meta itemprop="name" content="{{site.title}}" />
+    <meta itemprop="description" content="{{site.description}}" />
+    <meta itemprop="url" content="{{site.url}}" />
     <div class="blog-index" itemscope itemtype="http://schema.org/Blog">
       {% assign index = true %}
       {% for post in paginator.posts %}
