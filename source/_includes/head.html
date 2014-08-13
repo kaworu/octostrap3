@@ -23,6 +23,14 @@
   {% comment %}
     screen.css is included after custom/head so it can override stuff like Bootstrap fonts etc.
   {% endcomment %}
+
+  <!-- http://simonenko.su/tools/snippet/ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ canonical }}>
+  <meta property="og:title" content="{% if page.title %}{% if site.titlecase %}{{ page.title | titlecase | truncate:70 }}{% else %}{{ page.title | truncate:70 }}{% endif %} - {% endif %}{{ site.title }}">
+  <meta property="og:description" content="{% if page.title %}{{ page.content | excerpt | trip_html | condense_spaces | truncate:200 }}{% else %}{{ site.description | truncate:200 }}{% endif %}">
+  
   <link href="{{ root_url }}/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 
   {% include google_analytics.html %}
