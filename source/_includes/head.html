@@ -18,6 +18,13 @@
   <link href="{{ root_url }}/favicon.png" type="image/png" rel="icon">
   <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
 
+  <!-- http://opengraphprotocol.org/ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ canonical }}">
+  <meta property="og:title" content="{% if page.title %}{% if site.titlecase %}{{ page.title | titlecase | truncate:70 }}{% else %}{{ page.title | truncate:70 }}{% endif %} - {% endif %}{{ site.title }}">
+  {% if page.title %}{% if page.description %}<meta property="og:description" content="{{ page.description | strip_html | condense_spaces | truncate:200 }}">{% endif %}{% else %}{% if site.description %}<meta property="og:description" content="{{ site.description | truncate:200 }}">{% endif %}{% endif %}
+
   {% include custom/head.html %}
 
   {% comment %}
