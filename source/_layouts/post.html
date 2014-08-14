@@ -7,7 +7,7 @@ single: true
 <div class="row">
   <div class="page-content {% unless page.sidebar == false or site.post_asides == empty and site.default_asides == empty %}col-md-9{% else %}col-md-12{% endunless %}" itemscope itemtype="http://schema.org/Blog">
     <meta itemprop="name" content="{{site.title}}" />
-    <meta itemprop="description" content="{{site.description}}" />
+    {% if site.description %}<meta itemprop="description" content="{{site.description}}" />{% endif %}
     <meta itemprop="url" content="{{site.url}}" />
     <article class="hentry" role="article" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
       {% include article.html %}
