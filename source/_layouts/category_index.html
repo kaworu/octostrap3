@@ -6,7 +6,7 @@ navbar: Archives
 
 <div id="blog-archives" class="category" itemscope itemtype="http://schema.org/Blog">
 <meta itemprop="name" content="{{site.title}}" />
-<meta itemprop="description" content="{{site.description}}" />
+{% if site.description %}<meta itemprop="description" content="{{site.description}}" />{% endif %}
 <meta itemprop="url" content="{{site.url}}" />
 {% for post in site.categories[page.category] %}
 {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
