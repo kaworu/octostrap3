@@ -11,7 +11,7 @@ footer: true
 <div class="alert alert-info">
 <p>
     <span class="glyphicon glyphicon-info-sign"></span>
-    <strong>Octostrap3</strong> is compatible with Octopress 2.0
+    <strong>Octostrap3</strong> aim to be compatible with Octopress 2.0
     (<a href="https://github.com/imathis/octopress">
     master branch</a> on GitHub), the same version that is documented at
     <a href="http://octopress.org">octopress.org</a>. There is no support for
