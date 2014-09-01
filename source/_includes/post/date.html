@@ -1,9 +1,9 @@
 {% capture date %}{{ page.date }}{{ post.date }}{% endcapture %}
-{% capture date_formatted %}{{ page.date_formatted }}{{ post.date_formatted }}{% endcapture %}
+{% capture date_formatted %}{{ page.date | date: site.date_format }}{{ post.date | date: site.date_format }}{% endcapture %}
 {% capture has_date %}{{ date | size }}{% endcapture %}
 
 {% capture updated %}{{ page.updated }}{{ post.updated }}{% endcapture %}
-{% capture updated_formatted %}{{ page.updated_formatted }}{{ post.updated_formatted }}{% endcapture %}
+{% capture updated_formatted %}{{ page.updated | date: site.date_format }}{{ post.updated | date: site.date_format }}{% endcapture %}
 {% capture was_updated %}{{ updated | size }}{% endcapture %}
 
 {% if has_date != '0' %}
