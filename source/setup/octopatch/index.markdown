@@ -16,7 +16,7 @@ footer: true
         Patching plugins can make upgrades difficult (if you want to to upgrade
         Octopress at all). It is not required and you can skip this step and go
         straight to
-        <a href="{{ root_url }}/setup/install/pick-a-theme">the next part of this guide</a>.
+        <a href="{{ root_url }}/setup/pick-a-theme">the next part of this guide</a>.
       <li>
         If you don't know how <strong>diff(1)</strong> and
         <strong>patch(1)</strong> works, it is probably better that you avoid
