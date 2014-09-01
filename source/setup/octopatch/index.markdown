@@ -36,8 +36,8 @@ theme.
     <p>
       <span class="glyphicon glyphicon-info-sign"></span>
       Theses patches were tested against the latest version of Octopress
-      master's branch at the time of writting (18 Jul 2014):<br>
-      commit <strong>4fdae37e4294618084f652c99c0c06ba7663ac07</strong>
+      master's branch at the time of writting (01 Sept 2014):<br>
+      commit <strong>6bd719fd96a0d03318ef25c1b3cd79abe0e4525b</strong>
     </p>
 </div>
 
