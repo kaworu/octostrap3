@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Github | Octostrap3 demo]]></title>
   <link href="http://kAworu.github.io/octostrap3/blog/categories/github/atom.xml" rel="self"/>
   <link href="http://kAworu.github.io/octostrap3/"/>
-  <updated>2014-10-20T11:30:48+02:00</updated>
+  <updated>2014-10-20T11:51:56+02:00</updated>
   <id>http://kAworu.github.io/octostrap3/</id>
   <author>
     <name><![CDATA[kAworu]]></name>
@@ -29,7 +29,7 @@ such, it can be used with any octopress/boostrap3 theme (and only a very few
 modifications are needed to &ldquo;untie&rdquo; it from octopress).</p>
 
 <p>If it suits you, the page&rsquo;s source (as all this blog&rsquo;s code) can be found
-<a href="https://github.com/kAworu/octopress/blob/octostrap3-demo/source/github-page-example/index.html">here</a>. In addition to Bootstrap3 &amp; jQuery, you&rsquo;ll need <code>strftime.js</code>.</p>
+<a href="https://github.com/kAworu/octostrap3/blob/gh-pages-src/source/github-page-example/index.html">here</a>. In addition to Bootstrap3 &amp; jQuery, you&rsquo;ll need <code>strftime.js</code>.</p>
 
 <p>Kudo to Jean Pierre for the idea :)</p>
 ]]></content>
