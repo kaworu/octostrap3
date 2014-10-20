@@ -22,4 +22,4 @@ If it suits you, the page's source (as all this blog's code) can be found
 Kudo to Jean Pierre for the idea :)
 
 [1]: http://carlboettiger.info/software.html
-[2]: https://github.com/kAworu/octopress/blob/octostrap3-demo/source/github-page-example/index.html
+[2]: https://github.com/kAworu/octostrap3/blob/gh-pages-src/source/github-page-example/index.html
