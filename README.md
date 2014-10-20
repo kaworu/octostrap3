@@ -2,9 +2,9 @@ octostrap3
 ===========
 
 Twitter Bootstrap 3 theme for Octopress ! Check **the demo**
-http://kaworu.github.io/octopress/ for setup instructions, customization and examples.
+http://kaworu.github.io/octostrap3 for setup instructions, customization and examples.
 
-You can get the demo's source here: https://github.com/kAworu/octopress/tree/octostrap3-demo
+You can get the demo's source here: https://github.com/kAworu/octostrap3/tree/gh-pages-src
 
 Quick install
 =============
