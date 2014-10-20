@@ -3,6 +3,7 @@
 }
 #blog-archives {
   article {
+    border-bottom: none;
     margin-top: inherit;
     margin-bottom: inherit;
     padding: 1em 0 1em;
@@ -11,12 +12,12 @@
       background: none;
     }
   }
-  h1 { margin-bottom: .3em; }
-  h2 {
+  .year {
     border: none;
     display: none;
   }
-  h1 {
+  .post-title {
+    margin-bottom: .3em;
     a {
       font-weight: normal;
       display: inline-block;
@@ -29,14 +30,14 @@
   }
   @media only screen and (min-width: 768px) {
     article { margin-left: 7em; }
-    h2 {
+    h2.year {
       float: left;
-      margin-top: 1.8em;
+      margin-top: 1.6em;
       font-weight: normal;
       display: inline-block;
       position: relative;
     }
-    .year { display: none; }
+    time.year { display: none; }
     article {
       padding:{bottom: .7em;}
     }
