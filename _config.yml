@@ -106,3 +106,6 @@ facebook_like: false
 
 # Duckduckgo as search engine
 quack_search: false
+
+# Yandex Metrika
+yandex_metrika_tracking_id:
