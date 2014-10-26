@@ -61,7 +61,7 @@ task :generate do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "## Generating Site with Jekyll"
   system "compass compile"
-  system "jekyll"
+  system "jekyll build" or abort "An error occurred generating the site."
 end
 
 desc "Watch the site and regenerate when it changes"
