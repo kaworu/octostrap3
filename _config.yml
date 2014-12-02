@@ -29,7 +29,7 @@ email:
 root: /octostrap3
 permalink: /blog/:year/:month/:day/:title/
 source: source
-destination: public/octopress
+destination: public/octostrap3
 plugins: plugins
 code_dir: downloads/code
 category_dir: blog/categories
