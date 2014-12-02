@@ -36,6 +36,16 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                {% if site.simple_search %}
+                    <li>
+                        <form class="search navbar-form navbar-right" action="{{ site.simple_search }}" method="GET">
+                            <input type="hidden" name="q" value="site:{{ site.url | shorthand_url }}">
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="q" placeholder="Search">
+                            </div>
+                        </form>
+                    </li>
+                {% endif %}
                 <li>
                     <a class="subscribe-rss" href="{{ site.subscribe_rss }}" title="subscribe via RSS">
                         <span class="visible-xs">RSS</span>
@@ -50,21 +60,7 @@
                     </a>
                 </li>
                 {% endif %}
-                <li id="fork-me-on-github-logo-wrapper">
-                    <a href="https://github.com/kAworu/octostrap3.git" title="Fork me on GitHub">
-                        <span class="visible-xs">GitHub</span>
-                        <img class="hidden-xs" src="{{ root_url }}/images/GitHub-Mark.png" alt="GitHub">
-                    </a>
-                </li>
             </ul>
-            {% if site.simple_search %}
-                <form class="search navbar-form navbar-right" action="{{ site.simple_search }}" method="GET">
-                    <input type="hidden" name="q" value="site:{{ site.url | shorthand_url }}">
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="q" placeholder="Search">
-                    </div>
-                </form>
-            {% endif %}
         </div>
     </div>
 </nav>
