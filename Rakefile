@@ -9,10 +9,10 @@ ssh_port       = "22"
 document_root  = "~/website.com/"
 rsync_delete   = false
 rsync_args     = ""  # Any extra arguments to pass to rsync
-deploy_default = "rsync"
+deploy_default = "openshift"
 
 # This will be configured for you when you run config_deploy
-deploy_branch  = "gh-pages"
+deploy_branch  = "master"
 
 ## -- Misc Configs -- ##
 
@@ -274,6 +274,76 @@ multitask :push do
     Bundler.with_clean_env { system "git push origin #{deploy_branch}" }
     puts "\n## Github Pages deploy complete"
   end
+end
+
+desc "Deploy website to OpenShift"
+task :openshift do
+  puts "## Deploying branch to OpenShift"
+  puts "## Pulling any updates from OpenShift"
+  cd "#{deploy_dir}" do 
+    Bundler.with_clean_env { system "git pull" }
+  end
+  (Dir["#{deploy_dir}/public/*"]).each { |f| rm_rf(f) }
+  Rake::Task[:copydot].invoke(public_dir, deploy_dir)
+  puts "\n## Copying #{public_dir} to #{deploy_dir}/public"
+  cp_r "#{public_dir}/.", "#{deploy_dir}/public"
+  cd "#{deploy_dir}" do
+    system "git add -A"
+    message = "Site updated at #{Time.now.utc}"
+    puts "\n## Committing: #{message}"
+    system "git commit -m \"#{message}\""
+    puts "\n## Pushing generated #{deploy_dir} website"
+    Bundler.with_clean_env { system "git push -f origin master" }
+    puts "\n## OpenShift deploy complete"
+  end
+end
+
+
+desc "Set up _deploy folder and deploy branch for Github Pages deployment"
+task :setup_openshift, :repo do |t, args|
+  if args.repo
+    repo_url = args.repo
+  else
+    puts "Enter the read/write url for your repository"
+    puts "(For example, 'ssh://546bcc30e0b8cd7bdc000025@example-username.rhcloud.com/~/git/example.git/')"
+    repo_url = get_stdin("Repository url: ")
+  end
+
+  url = /ssh:\/\/\w+@(?<url>\w+-\w+\.rhcloud\.com)/.match(repo_url)[:url]
+  jekyll_config = IO.read('_config.yml')
+  jekyll_config.sub!(/^url:.*$/, "url: #{url}")
+  File.open('_config.yml', 'w') do |f|
+    f.write jekyll_config
+  end
+  rm_rf deploy_dir
+  mkdir_p "#{deploy_dir}/public"
+
+  cp "config.ru", "#{deploy_dir}/"
+
+  cd "#{deploy_dir}" do
+    system "git init"
+    system "git remote add origin #{repo_url}"
+    system "git pull origin master"
+    system 'echo "My Octopress Page is coming soon &hellip;" > public/index.html'
+
+    # Create Gemfile
+    File.open("Gemfile", "w") do |f|     
+      f.write "source 'https://rubygems.org'\n"
+      f.write "ruby '2.0.0'\n"
+      f.write "\n"
+      f.write "gem 'sinatra'\n"
+    end
+
+    system "git add ."
+    system "git commit -m \"Octopress init\""
+    rakefile = IO.read(__FILE__)
+    rakefile.sub!(/deploy_branch(\s*)=(\s*)(["'])[\w-]*["']/, "deploy_branch\\1=\\2\\3master\\3")
+    rakefile.sub!(/deploy_default(\s*)=(\s*)(["'])[\w-]*["']/, "deploy_default\\1=\\2\\3openshift\\3")
+    File.open(__FILE__, 'w') do |f|
+      f.write rakefile
+    end
+  end
+  puts "\n---\n## Now you can deploy to #{repo_url} with `rake deploy` or `rake openshift` ##"
 end
 
 desc "Update configurations to support publishing to root or sub directory"
