@@ -281,12 +281,17 @@ task :openshift do
   puts "## Deploying branch to OpenShift"
   puts "## Pulling any updates from OpenShift"
   cd "#{deploy_dir}" do 
-    Bundler.with_clean_env { system "git pull" }
+    Bundler.with_clean_env {
+      system "git pull origin master"
+      system "bundle install"
+    }
   end
-  (Dir["#{deploy_dir}/public/*"]).each { |f| rm_rf(f) }
-  Rake::Task[:copydot].invoke(public_dir, deploy_dir)
-  puts "\n## Copying #{public_dir} to #{deploy_dir}/public"
-  cp_r "#{public_dir}/.", "#{deploy_dir}/public"
+  if Dir.exists? "#{public_dir}"
+    (Dir["#{deploy_dir}/public/*"]).each { |f| rm_rf(f) }
+    Rake::Task[:copydot].invoke(public_dir, deploy_dir)
+    puts "\n## Copying #{public_dir} to #{deploy_dir}/public"
+    cp_r "#{public_dir}/.", "#{deploy_dir}/public"
+  end
   cd "#{deploy_dir}" do
     system "git add -A"
     message = "Site updated at #{Time.now.utc}"
@@ -317,18 +322,20 @@ task :setup_openshift, [:repo, :force_ssl] do |t, args|
   rm_rf deploy_dir
   mkdir_p "#{deploy_dir}/public"
 
-  cp "config.ru", "#{deploy_dir}/"
-
   cd "#{deploy_dir}" do
     system "git init"
     system "git remote add origin #{repo_url}"
     system "git pull origin master"
+  end
+
+  cp "config.ru", "#{deploy_dir}/"
+  
+  cd "#{deploy_dir}" do
     system 'echo "My Octopress Page is coming soon &hellip;" > public/index.html'
 
     # Create Gemfile
     File.open("Gemfile", "w") do |f|     
       f.puts "source 'https://rubygems.org'"
-      f.puts "ruby '2.0.0'"
       f.puts
       f.puts "gem 'sinatra'"
       unless args.force_ssl.nil?
