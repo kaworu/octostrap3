@@ -340,9 +340,10 @@ task :setup_openshift, [:repo, :force_ssl] do |t, args|
       puts "\n## Updating Static Server to force SSL in production"
       file = File.readlines("config.ru")
       index = file.index { |line| line =~ /class SinatraStaticServer/ }
-      file.insert(index+1, "\tconfigure :production do")
-      file.insert(index+2, "\t\tuse Rack::SSL")
-      file.insert(index+3, "\tend\n\n")
+      file.insert(index+1, "  configure :production do")
+      file.insert(index+2, "    use Rack::SSL")
+      file.insert(index+3, "  end\n\n")
+      file.insert(index, "require 'rack/ssl'\n\n")
       File.open("config.ru", "w") do |f|
         f.puts file
       end
