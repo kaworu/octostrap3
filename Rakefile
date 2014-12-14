@@ -298,9 +298,8 @@ task :openshift do
   end
 end
 
-
-desc "Set up _deploy folder and deploy branch for Github Pages deployment"
-task :setup_openshift, :repo do |t, args|
+desc "Set up _deploy folder and deploy branch for Openshift deployment"
+task :setup_openshift, [:repo, :force_ssl] do |t, args|
   if args.repo
     repo_url = args.repo
   else
@@ -328,10 +327,25 @@ task :setup_openshift, :repo do |t, args|
 
     # Create Gemfile
     File.open("Gemfile", "w") do |f|     
-      f.write "source 'https://rubygems.org'\n"
-      f.write "ruby '2.0.0'\n"
-      f.write "\n"
-      f.write "gem 'sinatra'\n"
+      f.puts "source 'https://rubygems.org'"
+      f.puts "ruby '2.0.0'"
+      f.puts
+      f.puts "gem 'sinatra'"
+      unless args.force_ssl.nil?
+        f.puts "gem 'rack-ssl'"
+      end
+    end
+
+    unless args.force_ssl.nil?
+      puts "\n## Updating Static Server to force SSL in production"
+      file = File.readlines("config.ru")
+      index = file.index { |line| line =~ /class SinatraStaticServer/ }
+      file.insert(index+1, "\tconfigure :production do")
+      file.insert(index+2, "\t\tuse Rack::SSL")
+      file.insert(index+3, "\tend\n\n")
+      File.open("config.ru", "w") do |f|
+        f.puts file
+      end
     end
 
     system "git add ."
