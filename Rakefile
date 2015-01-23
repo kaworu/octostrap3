@@ -322,7 +322,7 @@ task :setup_github_pages, :repo do |t, args|
     user = repo_url.match(/github\.com\/([^\/]+)/)[1]
   end
   branch = (repo_url.match(/\/[\w-]+\.github\.(?:io|com)/).nil?) ? 'gh-pages' : 'master'
-  project = (branch == 'gh-pages') ? repo_url.match(/\/([^\.]+)/)[1] : ''
+  project = (branch == 'gh-pages') ? repo_url.match(/([^\/]+?)(\.git|$)/i)[1] : ''
   unless (`git remote -v` =~ /origin.+?octopress(?:\.git)?/).nil?
     # If octopress is still the origin remote (from cloning) rename it to octopress
     system "git remote rename origin octopress"
@@ -341,8 +341,9 @@ task :setup_github_pages, :repo do |t, args|
       end
     end
   end
+  url = blog_url(user, project, source_dir)
   jekyll_config = IO.read('_config.yml')
-  jekyll_config.sub!(/^url:.*$/, "url: #{blog_url(user, project)}")
+  jekyll_config.sub!(/^url:.*$/, "url: #{url}")
   File.open('_config.yml', 'w') do |f|
     f.write jekyll_config
   end
@@ -350,7 +351,7 @@ task :setup_github_pages, :repo do |t, args|
   mkdir deploy_dir
   cd "#{deploy_dir}" do
     system "git init"
-    system "echo 'My Octopress Page is coming soon &hellip;' > index.html"
+    system 'echo "My Octopress Page is coming soon &hellip;" > index.html'
     system "git add ."
     system "git commit -m \"Octopress init\""
     system "git branch -m gh-pages" unless branch == 'master'
@@ -387,11 +388,12 @@ def ask(message, valid_options)
   answer
 end
 
-def blog_url(user, project)
-  url = if File.exists?('source/CNAME')
-    "http://#{IO.read('source/CNAME').strip}"
+def blog_url(user, project, source_dir)
+  cname = "#{source_dir}/CNAME"
+  url = if File.exists?(cname)
+    "http://#{IO.read(cname).strip}"
   else
-    "http://#{user}.github.io"
+    "http://#{user.downcase}.github.io"
   end
   url += "/#{project}" unless project == ''
   url

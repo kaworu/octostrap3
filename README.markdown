@@ -1,3 +1,7 @@
+## Octopress 3.0
+
+Note: Octopress 3.0 is in development at https://github.com/octopress/octopress
+
 ## What is Octopress?
 
 Octopress is [Jekyll](https://github.com/mojombo/jekyll) blogging at its finest.
@@ -38,4 +42,4 @@ THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 
 #### If you want to be awesome.
 - Proudly display the 'Powered by Octopress' credit in the footer.
-- Add your site to the Wiki so we can watch the community grow.
+- [Add your site to the Wiki](https://github.com/imathis/octopress/wiki/Octopress-Sites/_edit) so we can watch the community grow.
