@@ -4,7 +4,7 @@
   <title><![CDATA[Octostrap3 demo]]></title>
   <link href="http://kAworu.github.io/octostrap3/atom.xml" rel="self"/>
   <link href="http://kAworu.github.io/octostrap3/"/>
-  <updated>2014-10-31T15:09:51+01:00</updated>
+  <updated>2015-01-23T12:16:24+01:00</updated>
   <id>http://kAworu.github.io/octostrap3/</id>
   <author>
     <name><![CDATA[kAworu]]></name>
@@ -12,6 +12,56 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Octostrap 3.3.1 Release]]></title>
+    <link href="http://kAworu.github.io/octostrap3/blog/2015/01/23/octostrap-3-dot-3-1-release/"/>
+    <updated>2015-01-23T10:49:08+01:00</updated>
+    <id>http://kAworu.github.io/octostrap3/blog/2015/01/23/octostrap-3-dot-3-1-release</id>
+    <content type="html"><![CDATA[<p>Trying to keep up to date with
+<a href="http://blog.getbootstrap.com/2015/01/19/bootstrap-3-3-2-released/">Twitter Bootstrap</a>,
+<a href="https://github.com/kAworu/octostrap3/releases/tag/v3.3.1">here is a release for the 3.3.2 version</a>.
+As usual a lot of good stuff happened, here is a quick summary.</p>
+
+<h1>The &ldquo;ordinal&rdquo; issue</h1>
+
+<p><strong>Octostrap3</strong> is just an Octopress theme. Sadly, Octopress does not let the
+theme handle all the HTML generation and rendering (that&rsquo;s why we have to
+<a href="http://kAworu.github.io/octostrap3/setup/octopatch">patch Octopress</a> for some features). The
+latest issue is the date formating, which has already been discussed at length
+<a href="https://github.com/kAworu/octostrap3/commit/a719bb0bef43a212efd09c74ce07e4e35153635f">here</a>
+and
+<a href="https://github.com/kAworu/octostrap3/issues/41">here</a>.</p>
+
+<p>Long story short you only need to fix the <strong>date_format</strong> configuration (in
+your <em>_config.yml</em> file) to something that
+<a href="http://www.ruby-doc.org/core-2.2.0/Time.html#method-i-strftime">strftime()</a>
+can handle. For example, this blog use <code>%e %b %Y, %l:%M %p</code>.</p>
+
+<h1>Open Graph Protocol</h1>
+
+<p>Thanks to <a href="https://github.com/paskal">Dmitry Verkhoturov</a>, <strong>Octostrap3</strong> now
+support <a href="http://opengraphprotocol.org/">the Open Graph Protocol</a>. This allow a
+better integration with Facebook and some others social medias (using the
+Open Graph tags). See the
+<a href="https://github.com/kAworu/octostrap3/commit/f8ab42916cbb26e59ccc3f1ba1afd415a58e01f2">commit&rsquo;s comment</a>
+to fully take advantage of it.</p>
+
+<h1>a10y</h1>
+
+<p><strong>Octostrap3</strong> is in the process of improving Accessibility. Various small
+changes have been already made and it is still in progress. You can check and
+contribute to improve a10y by following / commenting on
+<a href="https://github.com/kAworu/octostrap3/issues/38">this issue</a>, we&rsquo;d love to hear
+about you !</p>
+
+<h1>Fixes</h1>
+
+<p>As usual, various bug fixes and small improvements here and there :)</p>
+
+<p>Enjoy !</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Octostrap 3.2.0 Release]]></title>
@@ -75,7 +125,7 @@ Date: Fri, 17 Jan 2014 12:06:41 +0100
 Subject: [PATCH] make_inet_socket(): Use SO_NOSIGPIPE when creating a client
  socket.
 
-  We have to check for error when sending anyway, so we'll check for
+  We have to check for error when sending anyway, so we&#39;ll check for
   EPIPE.
 
   Before this patch `rspamc stat` fail when it cannot connect to the
@@ -102,6 +152,74 @@ index 4a88bb1..8f5fdc1 100644
 1.8.5.2
 
 </code></pre></noscript></div>
+
+
+
+
+<figure class='code panel panel-default'><figcaption class='panel-heading'><h3 class='panel-title'> (0001-make_inet_socket-Use-SO_NOSIGPIPE-when-creating-a-cl.patch)</h3> <a href='http://kAworu.github.io/octostrap3/downloads/code/0001-make_inet_socket-Use-SO_NOSIGPIPE-when-creating-a-cl.patch'>download</a></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+</pre></td><td class='code'><pre><code class='diff'><span class='line'>From 59318158e58c0414ead9238126d2a7743a67e29e Mon Sep 17 00:00:00 2001
+</span><span class='line'>From: Alexandre Perrin &lt;alex@kaworu.ch&gt;
+</span><span class='line'>Date: Fri, 17 Jan 2014 12:06:41 +0100
+</span><span class='line'>Subject: [PATCH] make_inet_socket(): Use SO_NOSIGPIPE when creating a client
+</span><span class='line'> socket.
+</span><span class='line'>
+</span><span class='line'>  We have to check for error when sending anyway, so we&#39;ll check for
+</span><span class='line'>  EPIPE.
+</span><span class='line'>
+</span><span class='line'>  Before this patch `rspamc stat` fail when it cannot connect to the
+</span><span class='line'>  controller: it dies to SIGPIPE because the socket is fcntl O_NONBLOCK
+</span><span class='line'>  and we ignore when connect(2) says EINPROGRESS.
+</span><span class='line'><span class="gd">---</span>
+</span><span class='line'> src/util.c | 2 ++
+</span><span class='line'> 1 file changed, 2 insertions(+)
+</span><span class='line'>
+</span><span class='line'><span class="gh">diff --git a/src/util.c b/src/util.c</span>
+</span><span class='line'><span class="gh">index 4a88bb1..8f5fdc1 100644</span>
+</span><span class='line'><span class="gd">--- a/src/util.c</span>
+</span><span class='line'><span class="gi">+++ b/src/util.c</span>
+</span><span class='line'><span class="gu">@@ -124,6 +124,8 @@ make_inet_socket (gint type, struct addrinfo *addr, gboolean is_server, gboolean</span>
+</span><span class='line'>          r = bind (fd, cur-&gt;ai_addr, cur-&gt;ai_addrlen);
+</span><span class='line'>      }
+</span><span class='line'>      else {
+</span><span class='line'><span class="gi">+            /* we will check for EPIPE when sending data */</span>
+</span><span class='line'><span class="gi">+            setsockopt (fd, SOL_SOCKET, SO_NOSIGPIPE, (const void *)&amp;on, sizeof (gint));</span>
+</span><span class='line'>          r = connect (fd, cur-&gt;ai_addr, cur-&gt;ai_addrlen);
+</span><span class='line'>      }
+</span><span class='line'>
+</span><span class='line'><span class="gd">-- </span>
+</span><span class='line'>1.8.5.2
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Enjoy !</p>

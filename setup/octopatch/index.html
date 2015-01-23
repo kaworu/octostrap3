@@ -14,29 +14,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://kAworu.github.io/octostrap3/setup/octopatch">
-  <link href="/octostrap3/favicon.png" type="image/png" rel="icon">
-  <link href="/octostrap3/atom.xml" rel="alternate" title="Octostrap3 demo" type="application/atom+xml">
+  <link rel="canonical" href="http://kAworu.github.io/octostrap3/setup/octopatch/">
+  <link href="/octopress/favicon.png" type="image/png" rel="icon">
+  <link href="/octopress/atom.xml" rel="alternate" title="Octostrap3 demo" type="application/atom+xml">
 
   <!-- http://opengraphprotocol.org/ -->
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://kAworu.github.io/octostrap3/setup/octopatch">
+  <meta property="og:url" content="http://kAworu.github.io/octostrap3/setup/octopatch/">
   <meta property="og:title" content="Patching Octopress Plugins - Octostrap3 demo">
   
 
   <link rel="license" type="text/html" href="http://creativecommons.org/licenses/by/4.0/">
 
 
-  <link href="/octostrap3/assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="/octostrap3/assets/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+  <link href="/octopress/assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="/octopress/assets/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
 
 
-<script src="/octostrap3/javascripts/libs/jquery/jquery-2.0.3.min.js"></script>
+<script src="/octopress/javascripts/libs/jquery/jquery-2.1.3.min.js"></script>
 
 
   
-  <link href="/octostrap3/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/octopress/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 
   
 
@@ -47,65 +47,61 @@
     <div id="wrap">
       <header role="banner">
         <a id="fork-me-on-github-ribbon" href="https://github.com/kAworu/octostrap3.git">
-  <img class="gh-ribbon" src="/octostrap3/images/forkme_right_blue_3276b1.png" alt="Fork me on GitHub">
+  <img class="gh-ribbon" src="/octopress/images/forkme_right_blue_3276b1.png" alt="Fork me on GitHub">
 </a>
 
 <nav class="navbar navbar-default" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <button type="button" class="navbar-toggle" title="toggle navbar" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/octostrap3/">Octostrap3 demo</a>
+            <a class="navbar-brand" href="/octopress/">Octostrap3 demo</a>
         </div>
 
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li >
-                    <a rel="index" href="/octostrap3/">Blog</a>
+                    <a rel="index" href="/octopress/">Blog</a>
                 </li>
                 <li >
-                    <a href="/octostrap3/blog/archives">Archives</a>
+                    <a href="/octopress/blog/archives">Archives</a>
                 </li>
                 <li class="active">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Setup <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                       <li>
-                        <a href="/octostrap3/setup/install">Installation</a>
-                        <a href="/octostrap3/setup/octopatch">Plugins integration</a>
-                        <a href="/octostrap3/setup/pick-a-theme">Pick a theme</a>
+                        <a href="/octopress/setup/install">Installation</a>
+                        <a href="/octopress/setup/octopatch">Plugins integration</a>
+                        <a href="/octopress/setup/pick-a-theme">Pick a theme</a>
                       </li>
                     </ul>
                 </li>
                 <li >
-                    <a href="/octostrap3/about">About</a>
+                    <a href="/octopress/about">About</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <form class="search navbar-form navbar-right" action="https://www.google.com/search" method="GET">
+                            <input type="hidden" name="sitesearch" value="kAworu.github.io/octostrap3">
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="q" placeholder="Search">
+                            </div>
+                        </form>
+                    </li>
+                
                 <li>
-                    <a class="subscribe-rss" href="/octostrap3/atom.xml" title="subscribe via RSS">
+                    <a class="subscribe-rss" href="/octopress/atom.xml" title="subscribe via RSS">
                         <span class="visible-xs">RSS</span>
-                        <img class="hidden-xs" src="/octostrap3/images/rss.png" alt="RSS">
+                        <img class="hidden-xs" src="/octopress/images/rss.png" alt="RSS">
                     </a>
                 </li>
                 
-                <li id="fork-me-on-github-logo-wrapper">
-                    <a href="https://github.com/kAworu/octostrap3.git" title="Fork me on GitHub">
-                        <span class="visible-xs">GitHub</span>
-                        <img class="hidden-xs" src="/octostrap3/images/GitHub-Mark.png" alt="GitHub">
-                    </a>
-                </li>
             </ul>
-            
-                <form class="search navbar-form navbar-right" action="https://www.google.com/search" method="GET">
-                    <input type="hidden" name="q" value="site:kAworu.github.io/octostrap3">
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="q" placeholder="Search">
-                    </div>
-                </form>
-            
         </div>
     </div>
 </nav>
@@ -137,7 +133,7 @@
         Patching plugins can make upgrades difficult (if you want to to upgrade
         Octopress at all). It is not required and you can skip this step and go
         straight to
-        <a href="/octostrap3/setup/pick-a-theme">the next part of this guide</a>.
+        <a href="/octopress/setup/pick-a-theme">the next part of this guide</a>.
       <li>
         If you don&#8217;t know how <strong>diff(1)</strong> and
         <strong>patch(1)</strong> works, it is probably better that you avoid
@@ -160,8 +156,8 @@ theme.</p>
     <p>
       <span class="glyphicon glyphicon-info-sign"></span>
       Theses patches were tested against the latest version of Octopress
-      master&#8217;s branch at the time of writting (01 Sept 2014):<br>
-      commit <strong>6bd719fd96a0d03318ef25c1b3cd79abe0e4525b</strong>
+      master&#8217;s branch at the time of writting (23 Jan 2015):<br>
+      commit <strong>5080107cb9e4c7bad8feb719f7e57c1da3b20c65</strong>
     </p>
 </div>
 
@@ -197,7 +193,7 @@ better to have theses plugins output the Bootstrap&rsquo;s <code>panel</code> cl
 can be style by your theme.  Here are two patches, the first is for the
 <code>code_block</code> plugin and the second for the <code>include_code</code> plugin.</p>
 
-<figure class='code panel panel-default'><figcaption class='panel-heading'><h3 class='panel-title'> (code-block-with-bs-panel.patch)</h3> <a href='/octostrap3/downloads/code/code-block-with-bs-panel.patch'>download</a></figcaption>
+<figure class='code panel panel-default'><figcaption class='panel-heading'><h3 class='panel-title'> (code-block-with-bs-panel.patch)</h3> <a href='/octopress/downloads/code/code-block-with-bs-panel.patch'>download</a></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -211,49 +207,23 @@ can be style by your theme.  Here are two patches, the first is for the
 <span class='line-number'>11</span>
 <span class='line-number'>12</span>
 <span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'><span class="gh">diff --git a/plugins/code_block.rb b/plugins/code_block.rb</span>
-</span><span class='line'><span class="gh">index 539a347..733bea2 100644</span>
-</span><span class='line'><span class="gd">--- a/plugins/code_block.rb</span>
-</span><span class='line'><span class="gi">+++ b/plugins/code_block.rb</span>
-</span><span class='line'><span class="gu">@@ -60,10 +60,10 @@ module Jekyll</span>
-</span><span class='line'>       end
-</span><span class='line'>       if markup =~ CaptionUrlTitle
-</span><span class='line'>         @file = $1
-</span><span class='line'><span class="gd">-        @caption = &quot;&lt;figcaption&gt;&lt;span&gt;#{$1}&lt;/span&gt;&lt;a href=&#39;#{$2}&#39;&gt;#{$3 || &#39;link&#39;}&lt;/a&gt;&lt;/figcaption&gt;&quot;</span>
-</span><span class='line'><span class="gi">+        @caption = &quot;&lt;figcaption class=&#39;panel-heading&#39;&gt;&lt;h3 class=&#39;panel-title&#39;&gt;#{$1}&lt;/h3&gt;&lt;a href=&#39;#{$2}&#39;&gt;#{$3 || &#39;link&#39;}&lt;/a&gt;&lt;/figcaption&gt;&quot;</span>
-</span><span class='line'>       elsif markup =~ Caption
-</span><span class='line'>         @file = $1
-</span><span class='line'><span class="gd">-        @caption = &quot;&lt;figcaption&gt;&lt;span&gt;#{$1}&lt;/span&gt;&lt;/figcaption&gt;\n&quot;</span>
-</span><span class='line'><span class="gi">+        @caption = &quot;&lt;figcaption class=&#39;panel-heading&#39;&gt;&lt;h3 class=&#39;panel-title&#39;&gt;#{$1}&lt;/h3&gt;&lt;/figcaption&gt;\n&quot;</span>
-</span><span class='line'>       end
-</span><span class='line'>       if @file =~ /\S[\S\s]*\w+\.(\w+)/ &amp;&amp; @filetype.nil?
-</span><span class='line'>         @filetype = $1
-</span><span class='line'><span class="gu">@@ -74,7 +74,7 @@ module Jekyll</span>
-</span><span class='line'>     def render(context)
-</span><span class='line'>       output = super
-</span><span class='line'>       code = super
-</span><span class='line'><span class="gd">-      source = &quot;&lt;figure class=&#39;code&#39;&gt;&quot;</span>
-</span><span class='line'><span class="gi">+      source = &quot;&lt;figure class=&#39;code panel panel-default&#39;&gt;&quot;</span>
-</span><span class='line'>       source += @caption if @caption
-</span><span class='line'>       if @filetype
+</pre></td><td class='code'><pre><code class=''><span class='line'><span class="gh">diff --git a/plugins/include_code.rb b/plugins/include_code.rb</span>
+</span><span class='line'><span class="gh">index a61d06c..1c77426 100644</span>
+</span><span class='line'><span class="gd">--- a/plugins/include_code.rb</span>
+</span><span class='line'><span class="gi">+++ b/plugins/include_code.rb</span>
+</span><span class='line'><span class="gu">@@ -59,7 +59,7 @@ module Jekyll</span>
+</span><span class='line'>         @filetype = file.extname.sub(&#39;.&#39;,&#39;&#39;) if @filetype.nil?
+</span><span class='line'>         title = @title ? &quot;#{@title} (#{file.basename})&quot; : file.basename
+</span><span class='line'>         url = &quot;/#{code_dir}/#{@file}&quot;
+</span><span class='line'><span class="gd">-        source = &quot;&lt;figure class=&#39;code&#39;&gt;&lt;figcaption&gt;&lt;span&gt;#{title}&lt;/span&gt; &lt;a href=&#39;#{url}&#39;&gt;download&lt;/a&gt;&lt;/figcaption&gt;\n&quot;</span>
+</span><span class='line'><span class="gi">+        source = &quot;&lt;figure class=&#39;code panel panel-default&#39;&gt;&lt;figcaption class=&#39;panel-heading&#39;&gt;&lt;h3 class=&#39;panel-title&#39;&gt;#{title}&lt;/h3&gt; &lt;a href=&#39;#{url}&#39;&gt;download&lt;/a&gt;&lt;/figcaption&gt;\n&quot;</span>
 </span><span class='line'>         source += &quot;#{HighlightCode::highlight(code, @filetype)}&lt;/figure&gt;&quot;
+</span><span class='line'>         TemplateWrapper::safe_wrap(source)
+</span><span class='line'>       end
 </span></code></pre></td></tr></table></div></figure>
 
 
-<figure class='code panel panel-default'><figcaption class='panel-heading'><h3 class='panel-title'> (include-code-with-bs-panel.patch)</h3> <a href='/octostrap3/downloads/code/include-code-with-bs-panel.patch'>download</a></figcaption>
+<figure class='code panel panel-default'><figcaption class='panel-heading'><h3 class='panel-title'> (include-code-with-bs-panel.patch)</h3> <a href='/octopress/downloads/code/include-code-with-bs-panel.patch'>download</a></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -306,7 +276,7 @@ the job. The patch will turn them into this:</p>
 
 <p>And here it is:</p>
 
-<figure class='code panel panel-default'><figcaption class='panel-heading'><h3 class='panel-title'> (category-with-bs-label.patch)</h3> <a href='/octostrap3/downloads/code/category-with-bs-label.patch'>download</a></figcaption>
+<figure class='code panel panel-default'><figcaption class='panel-heading'><h3 class='panel-title'> (category-with-bs-label.patch)</h3> <a href='/octopress/downloads/code/category-with-bs-label.patch'>download</a></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -330,19 +300,19 @@ the job. The patch will turn them into this:</p>
 <span class='line-number'>21</span>
 <span class='line-number'>22</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'><span class="gh">diff --git a/plugins/category_generator.rb b/plugins/category_generator.rb</span>
-</span><span class='line'><span class="gh">index c55d62f..5e7ead4 100644</span>
+</span><span class='line'><span class="gh">index 769a55b..79db41b 100644</span>
 </span><span class='line'><span class="gd">--- a/plugins/category_generator.rb</span>
 </span><span class='line'><span class="gi">+++ b/plugins/category_generator.rb</span>
-</span><span class='line'><span class="gu">@@ -161,7 +161,7 @@ ERR</span>
-</span><span class='line'>       when 1
-</span><span class='line'>         categories[0].to_s
-</span><span class='line'>       else
-</span><span class='line'><span class="gd">-        &quot;#{categories[0...-1].join(&#39;, &#39;)}, #{categories[-1]}&quot;</span>
-</span><span class='line'><span class="gi">+        &quot;#{categories[0...-1].join(&#39; &#39;)} #{categories[-1]}&quot;</span>
-</span><span class='line'>       end
+</span><span class='line'><span class="gu">@@ -153,7 +153,7 @@ ERR</span>
+</span><span class='line'>     # Returns string
+</span><span class='line'>     #
+</span><span class='line'>     def category_links(categories)
+</span><span class='line'><span class="gd">-      categories.sort.map { |c| category_link c }.join(&#39;, &#39;)</span>
+</span><span class='line'><span class="gi">+      categories.sort.map { |c| category_link c }.join(&#39; &#39;)</span>
 </span><span class='line'>     end
 </span><span class='line'>
-</span><span class='line'><span class="gu">@@ -173,7 +173,7 @@ ERR</span>
+</span><span class='line'>     # Outputs a single category as an &lt;a&gt; link.
+</span><span class='line'><span class="gu">@@ -164,7 +164,7 @@ ERR</span>
 </span><span class='line'>     #
 </span><span class='line'>     def category_link(category)
 </span><span class='line'>       dir = @context.registers[:site].config[&#39;category_dir&#39;]
@@ -357,8 +327,8 @@ the job. The patch will turn them into this:</p>
 
 
 <ul class="pager">
-    <li class="previous"><a href="/octostrap3/setup/install">&laquo; Installation</a></li>
-    <li class="next"><a href="/octostrap3/setup/pick-a-theme">Pick a Bootstrap theme &raquo;</a></li>
+    <li class="previous"><a href="/octopress/setup/install">&laquo; Installation</a></li>
+    <li class="next"><a href="/octopress/setup/pick-a-theme">Pick a Bootstrap theme &raquo;</a></li>
 </ul>
 
 
@@ -402,13 +372,13 @@ the job. The patch will turn them into this:</p>
   
   <div id="recent_posts" class="list-group">
     
-    <a class="list-group-item " href="/octostrap3/blog/2014/07/23/octostrap-3-dot-2-0-release/">Octostrap 3.2.0 Release</a>
+    <a class="list-group-item " href="/octopress/blog/2015/01/23/octostrap-3-dot-3-1-release/">Octostrap 3.3.1 Release</a>
     
-    <a class="list-group-item " href="/octostrap3/blog/2014/02/03/octostrap-3-dot-1-is-out/">Octostrap 3.1 Is Out</a>
+    <a class="list-group-item " href="/octopress/blog/2014/07/23/octostrap-3-dot-2-0-release/">Octostrap 3.2.0 Release</a>
     
-    <a class="list-group-item " href="/octostrap3/blog/2013/11/23/github-page/">GitHub Page</a>
+    <a class="list-group-item " href="/octopress/blog/2014/02/03/octostrap-3-dot-1-is-out/">Octostrap 3.1 Is Out</a>
     
-    <a class="list-group-item " href="/octostrap3/blog/2013/10/03/category-list-aside/">Category List Aside</a>
+    <a class="list-group-item " href="/octopress/blog/2013/11/23/github-page/">GitHub Page</a>
     
   </div>
 </section>
@@ -419,13 +389,13 @@ the job. The patch will turn them into this:</p>
   <div class="list-group">
     
     
-    <a class="list-group-item " href="/octostrap3/blog/categories/octopress/index.html">
+    <a class="list-group-item " href="/octopress/blog/categories/octopress/index.html">
         <span class="badge">4</span>
         octopress
       </a>
     
     
-    <a class="list-group-item " href="/octostrap3/blog/categories/github/index.html">
+    <a class="list-group-item " href="/octopress/blog/categories/github/index.html">
         <span class="badge">1</span>
         github
       </a>
@@ -443,7 +413,7 @@ the job. The patch will turn them into this:</p>
     </div>
     <footer role="contentinfo"><div class="container">
     <p class="text-muted credits">
-  Copyright &copy; 2014 - <a href="https://kaworu.ch" title="kAworu's blog">kAworu</a><br>
+  Copyright &copy; 2015 - <a href="https://kaworu.ch" title="kAworu's blog">kAworu</a><br>
   <small>
       <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>,
       <span class="credit">customized with <a href="https://github.com/kAworu/octostrap3">octostrap3</a></span>.
@@ -504,8 +474,8 @@ the job. The patch will turn them into this:</p>
   </script>
 
 
-<script src="/octostrap3/assets/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="/octostrap3/javascripts/modernizr-2.0.js"></script>
+<script src="/octopress/assets/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/octopress/javascripts/modernizr.js"></script>
 
 
   </body>
