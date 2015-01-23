@@ -1,17 +1,17 @@
 diff --git a/plugins/category_generator.rb b/plugins/category_generator.rb
-index c55d62f..5e7ead4 100644
+index 769a55b..79db41b 100644
 --- a/plugins/category_generator.rb
 +++ b/plugins/category_generator.rb
-@@ -161,7 +161,7 @@ ERR
-       when 1
-         categories[0].to_s
-       else
--        "#{categories[0...-1].join(', ')}, #{categories[-1]}"
-+        "#{categories[0...-1].join(' ')} #{categories[-1]}"
-       end
+@@ -153,7 +153,7 @@ ERR
+     # Returns string
+     #
+     def category_links(categories)
+-      categories.sort.map { |c| category_link c }.join(', ')
++      categories.sort.map { |c| category_link c }.join(' ')
      end
  
-@@ -173,7 +173,7 @@ ERR
+     # Outputs a single category as an <a> link.
+@@ -164,7 +164,7 @@ ERR
      #
      def category_link(category)
        dir = @context.registers[:site].config['category_dir']
