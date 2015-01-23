@@ -6,7 +6,7 @@ var github = (function(){
     var i = 0, fragment = '', t = $(target)[0];
 
     for(i = 0; i < repos.length; i++) {
-      fragment += '<a class="list-group-item" href="'+repos[i].html_url+'"><h4 class="list-group-item-heading">'+repos[i].name+'</h4><p>'+escapeHtml(repos[i].description||'')+'</p></a>';
+      fragment += '<li><a href="'+repos[i].html_url+'">'+repos[i].name+'</a><p>'+escapeHtml(repos[i].description||'')+'</p></li>';
     }
     t.innerHTML = fragment;
   }
