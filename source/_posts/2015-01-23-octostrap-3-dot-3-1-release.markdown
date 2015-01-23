@@ -24,7 +24,7 @@ and
 Long story short you only need to fix the **date\_format** configuration (in
 your *\_config.yml* file) to something that
 [strftime()](http://www.ruby-doc.org/core-2.2.0/Time.html#method-i-strftime)
-can handle. For example, this blog use `%e %b %Y, %l:%M %p`.
+can handle. For example, this blog use `%a %e %b %Y, %l:%M %p`.
 
 Open Graph Protocol
 ===================
