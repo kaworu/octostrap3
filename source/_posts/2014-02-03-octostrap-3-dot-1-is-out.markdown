@@ -19,6 +19,7 @@ latest **Octopress** version and gist integration has been improved. Here is a
 preview of what gist should look like now:
 
 {% gist 8471788 %}
+{% include_code 0001-make_inet_socket-Use-SO_NOSIGPIPE-when-creating-a-cl.patch lang:diff %}
 
 Enjoy !
 

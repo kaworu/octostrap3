@@ -1,0 +1,32 @@
+From 59318158e58c0414ead9238126d2a7743a67e29e Mon Sep 17 00:00:00 2001
+From: Alexandre Perrin <alex@kaworu.ch>
+Date: Fri, 17 Jan 2014 12:06:41 +0100
+Subject: [PATCH] make_inet_socket(): Use SO_NOSIGPIPE when creating a client
+ socket.
+
+  We have to check for error when sending anyway, so we'll check for
+  EPIPE.
+
+  Before this patch `rspamc stat` fail when it cannot connect to the
+  controller: it dies to SIGPIPE because the socket is fcntl O_NONBLOCK
+  and we ignore when connect(2) says EINPROGRESS.
+---
+ src/util.c | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/src/util.c b/src/util.c
+index 4a88bb1..8f5fdc1 100644
+--- a/src/util.c
++++ b/src/util.c
+@@ -124,6 +124,8 @@ make_inet_socket (gint type, struct addrinfo *addr, gboolean is_server, gboolean
+ 			r = bind (fd, cur->ai_addr, cur->ai_addrlen);
+ 		}
+ 		else {
++			/* we will check for EPIPE when sending data */
++			setsockopt (fd, SOL_SOCKET, SO_NOSIGPIPE, (const void *)&on, sizeof (gint));
+ 			r = connect (fd, cur->ai_addr, cur->ai_addrlen);
+ 		}
+ 
+-- 
+1.8.5.2
+
