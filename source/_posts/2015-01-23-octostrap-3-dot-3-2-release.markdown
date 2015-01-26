@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Octostrap 3.3.1 release"
+title: "Octostrap 3.3.2 release"
 date: 2015-01-23 10:49:08 +0100
 comments: true
 categories: 
@@ -8,7 +8,7 @@ categories:
 
 Trying to keep up to date with
 [Twitter Bootstrap](http://blog.getbootstrap.com/2015/01/19/bootstrap-3-3-2-released/),
-[here is a release for the 3.3.2 version](https://github.com/kAworu/octostrap3/releases/tag/v3.3.1).
+[here is a release for the 3.3.2 version](https://github.com/kAworu/octostrap3/releases/tag/v3.3.2).
 As usual a lot of good stuff happened, here is a quick summary.
 
 The "ordinal" issue
