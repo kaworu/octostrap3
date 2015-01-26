@@ -4,7 +4,7 @@
   <title><![CDATA[Octostrap3 demo]]></title>
   <link href="http://kAworu.github.io/octostrap3/atom.xml" rel="self"/>
   <link href="http://kAworu.github.io/octostrap3/"/>
-  <updated>2015-01-26T09:21:33+01:00</updated>
+  <updated>2015-01-26T09:25:57+01:00</updated>
   <id>http://kAworu.github.io/octostrap3/</id>
   <author>
     <name><![CDATA[kAworu]]></name>
@@ -14,13 +14,13 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Octostrap 3.3.1 Release]]></title>
-    <link href="http://kAworu.github.io/octostrap3/blog/2015/01/23/octostrap-3-dot-3-1-release/"/>
+    <title type="html"><![CDATA[Octostrap 3.3.2 Release]]></title>
+    <link href="http://kAworu.github.io/octostrap3/blog/2015/01/23/octostrap-3-dot-3-2-release/"/>
     <updated>2015-01-23T10:49:08+01:00</updated>
-    <id>http://kAworu.github.io/octostrap3/blog/2015/01/23/octostrap-3-dot-3-1-release</id>
+    <id>http://kAworu.github.io/octostrap3/blog/2015/01/23/octostrap-3-dot-3-2-release</id>
     <content type="html"><![CDATA[<p>Trying to keep up to date with
 <a href="http://blog.getbootstrap.com/2015/01/19/bootstrap-3-3-2-released/">Twitter Bootstrap</a>,
-<a href="https://github.com/kAworu/octostrap3/releases/tag/v3.3.1">here is a release for the 3.3.2 version</a>.
+<a href="https://github.com/kAworu/octostrap3/releases/tag/v3.3.2">here is a release for the 3.3.2 version</a>.
 As usual a lot of good stuff happened, here is a quick summary.</p>
 
 <h1>The &ldquo;ordinal&rdquo; issue</h1>
