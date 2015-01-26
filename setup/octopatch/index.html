@@ -207,19 +207,45 @@ can be style by your theme.  Here are two patches, the first is for the
 <span class='line-number'>11</span>
 <span class='line-number'>12</span>
 <span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'><span class="gh">diff --git a/plugins/include_code.rb b/plugins/include_code.rb</span>
-</span><span class='line'><span class="gh">index a61d06c..1c77426 100644</span>
-</span><span class='line'><span class="gd">--- a/plugins/include_code.rb</span>
-</span><span class='line'><span class="gi">+++ b/plugins/include_code.rb</span>
-</span><span class='line'><span class="gu">@@ -59,7 +59,7 @@ module Jekyll</span>
-</span><span class='line'>         @filetype = file.extname.sub(&#39;.&#39;,&#39;&#39;) if @filetype.nil?
-</span><span class='line'>         title = @title ? &quot;#{@title} (#{file.basename})&quot; : file.basename
-</span><span class='line'>         url = &quot;/#{code_dir}/#{@file}&quot;
-</span><span class='line'><span class="gd">-        source = &quot;&lt;figure class=&#39;code&#39;&gt;&lt;figcaption&gt;&lt;span&gt;#{title}&lt;/span&gt; &lt;a href=&#39;#{url}&#39;&gt;download&lt;/a&gt;&lt;/figcaption&gt;\n&quot;</span>
-</span><span class='line'><span class="gi">+        source = &quot;&lt;figure class=&#39;code panel panel-default&#39;&gt;&lt;figcaption class=&#39;panel-heading&#39;&gt;&lt;h3 class=&#39;panel-title&#39;&gt;#{title}&lt;/h3&gt; &lt;a href=&#39;#{url}&#39;&gt;download&lt;/a&gt;&lt;/figcaption&gt;\n&quot;</span>
-</span><span class='line'>         source += &quot;#{HighlightCode::highlight(code, @filetype)}&lt;/figure&gt;&quot;
-</span><span class='line'>         TemplateWrapper::safe_wrap(source)
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'><span class="gh">diff --git a/plugins/code_block.rb b/plugins/code_block.rb</span>
+</span><span class='line'><span class="gh">index 539a347..733bea2 100644</span>
+</span><span class='line'><span class="gd">--- a/plugins/code_block.rb</span>
+</span><span class='line'><span class="gi">+++ b/plugins/code_block.rb</span>
+</span><span class='line'><span class="gu">@@ -60,10 +60,10 @@ module Jekyll</span>
 </span><span class='line'>       end
+</span><span class='line'>       if markup =~ CaptionUrlTitle
+</span><span class='line'>         @file = $1
+</span><span class='line'><span class="gd">-        @caption = &quot;&lt;figcaption&gt;&lt;span&gt;#{$1}&lt;/span&gt;&lt;a href=&#39;#{$2}&#39;&gt;#{$3 || &#39;link&#39;}&lt;/a&gt;&lt;/figcaption&gt;&quot;</span>
+</span><span class='line'><span class="gi">+        @caption = &quot;&lt;figcaption class=&#39;panel-heading&#39;&gt;&lt;h3 class=&#39;panel-title&#39;&gt;#{$1}&lt;/h3&gt;&lt;a href=&#39;#{$2}&#39;&gt;#{$3 || &#39;link&#39;}&lt;/a&gt;&lt;/figcaption&gt;&quot;</span>
+</span><span class='line'>       elsif markup =~ Caption
+</span><span class='line'>         @file = $1
+</span><span class='line'><span class="gd">-        @caption = &quot;&lt;figcaption&gt;&lt;span&gt;#{$1}&lt;/span&gt;&lt;/figcaption&gt;\n&quot;</span>
+</span><span class='line'><span class="gi">+        @caption = &quot;&lt;figcaption class=&#39;panel-heading&#39;&gt;&lt;h3 class=&#39;panel-title&#39;&gt;#{$1}&lt;/h3&gt;&lt;/figcaption&gt;\n&quot;</span>
+</span><span class='line'>       end
+</span><span class='line'>       if @file =~ /\S[\S\s]*\w+\.(\w+)/ &amp;&amp; @filetype.nil?
+</span><span class='line'>         @filetype = $1
+</span><span class='line'><span class="gu">@@ -74,7 +74,7 @@ module Jekyll</span>
+</span><span class='line'>     def render(context)
+</span><span class='line'>       output = super
+</span><span class='line'>       code = super
+</span><span class='line'><span class="gd">-      source = &quot;&lt;figure class=&#39;code&#39;&gt;&quot;</span>
+</span><span class='line'><span class="gi">+      source = &quot;&lt;figure class=&#39;code panel panel-default&#39;&gt;&quot;</span>
+</span><span class='line'>       source += @caption if @caption
+</span><span class='line'>       if @filetype
+</span><span class='line'>         source += &quot;#{HighlightCode::highlight(code, @filetype)}&lt;/figure&gt;&quot;
 </span></code></pre></td></tr></table></div></figure>
 
 

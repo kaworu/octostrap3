@@ -4,7 +4,7 @@
   <title><![CDATA[Octostrap3 demo]]></title>
   <link href="http://kAworu.github.io/octostrap3/atom.xml" rel="self"/>
   <link href="http://kAworu.github.io/octostrap3/"/>
-  <updated>2015-01-23T13:45:39+01:00</updated>
+  <updated>2015-01-26T09:21:33+01:00</updated>
   <id>http://kAworu.github.io/octostrap3/</id>
   <author>
     <name><![CDATA[kAworu]]></name>
@@ -36,7 +36,7 @@ and
 <p>Long story short you only need to fix the <strong>date_format</strong> configuration (in
 your <em>_config.yml</em> file) to something that
 <a href="http://www.ruby-doc.org/core-2.2.0/Time.html#method-i-strftime">strftime()</a>
-can handle. For example, this blog use <code>%e %b %Y, %l:%M %p</code>.</p>
+can handle. For example, this blog use <code>%a %e %b %Y, %l:%M %p</code>.</p>
 
 <h1>Open Graph Protocol</h1>
 
