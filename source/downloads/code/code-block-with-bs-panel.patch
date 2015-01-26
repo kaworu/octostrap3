@@ -1,13 +1,26 @@
-diff --git a/plugins/include_code.rb b/plugins/include_code.rb
-index a61d06c..1c77426 100644
---- a/plugins/include_code.rb
-+++ b/plugins/include_code.rb
-@@ -59,7 +59,7 @@ module Jekyll
-         @filetype = file.extname.sub('.','') if @filetype.nil?
-         title = @title ? "#{@title} (#{file.basename})" : file.basename
-         url = "/#{code_dir}/#{@file}"
--        source = "<figure class='code'><figcaption><span>#{title}</span> <a href='#{url}'>download</a></figcaption>\n"
-+        source = "<figure class='code panel panel-default'><figcaption class='panel-heading'><h3 class='panel-title'>#{title}</h3> <a href='#{url}'>download</a></figcaption>\n"
-         source += "#{HighlightCode::highlight(code, @filetype)}</figure>"
-         TemplateWrapper::safe_wrap(source)
+diff --git a/plugins/code_block.rb b/plugins/code_block.rb
+index 539a347..733bea2 100644
+--- a/plugins/code_block.rb
++++ b/plugins/code_block.rb
+@@ -60,10 +60,10 @@ module Jekyll
        end
+       if markup =~ CaptionUrlTitle
+         @file = $1
+-        @caption = "<figcaption><span>#{$1}</span><a href='#{$2}'>#{$3 || 'link'}</a></figcaption>"
++        @caption = "<figcaption class='panel-heading'><h3 class='panel-title'>#{$1}</h3><a href='#{$2}'>#{$3 || 'link'}</a></figcaption>"
+       elsif markup =~ Caption
+         @file = $1
+-        @caption = "<figcaption><span>#{$1}</span></figcaption>\n"
++        @caption = "<figcaption class='panel-heading'><h3 class='panel-title'>#{$1}</h3></figcaption>\n"
+       end
+       if @file =~ /\S[\S\s]*\w+\.(\w+)/ && @filetype.nil?
+         @filetype = $1
+@@ -74,7 +74,7 @@ module Jekyll
+     def render(context)
+       output = super
+       code = super
+-      source = "<figure class='code'>"
++      source = "<figure class='code panel panel-default'>"
+       source += @caption if @caption
+       if @filetype
+         source += "#{HighlightCode::highlight(code, @filetype)}</figure>"
