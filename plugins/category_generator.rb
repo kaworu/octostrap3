@@ -90,15 +90,11 @@ module Jekyll
     #  +category+     is the category currently being processed.
     def write_category_index(category_dir, category)
       index = CategoryIndex.new(self, self.source, category_dir, category)
-      index.render(self.layouts, site_payload)
-      index.write(self.dest)
       # Record the fact that this page has been added, otherwise Site::cleanup will remove it.
       self.pages << index
 
       # Create an Atom-feed for each index.
       feed = CategoryFeed.new(self, self.source, category_dir, category)
-      feed.render(self.layouts, site_payload)
-      feed.write(self.dest)
       # Record the fact that this page has been added, otherwise Site::cleanup will remove it.
       self.pages << feed
     end
@@ -107,7 +103,7 @@ module Jekyll
     def write_category_indexes
       if self.layouts.key? 'category_index'
         dir = self.config['category_dir'] || 'categories'
-        self.categories.keys.each do |category|
+        downcase_categories(self.categories).keys.each do |category|
           self.write_category_index(File.join(dir, category.to_url), category)
         end
 
@@ -125,6 +121,25 @@ module Jekyll
 
 ERR
       end
+    end
+
+    # Convert categories into downcase keys to solve issue that 'Git' and 'git' will override each other
+    alias orig_site_payload site_payload
+    def site_payload
+        h = orig_site_payload
+        payload = h["site"]
+        payload['categories'] = downcase_categories(payload['categories'])
+
+        h["site"] = payload
+        h
+    end
+
+    def downcase_categories(categories)
+        downcase_categories = Hash.new(Array.new)
+        categories.each do |k, v|
+          downcase_categories[k.downcase] += v
+        end
+        downcase_categories
     end
 
   end
@@ -153,7 +168,16 @@ ERR
     # Returns string
     #
     def category_links(categories)
-      categories.sort.map { |c| category_link c }.join(' ')
+      categories = categories.to_a.sort!.map { |c| category_link c }
+
+      case categories.length
+      when 0
+        ""
+      when 1
+        categories[0].to_s
+      else
+        "#{categories[0...-1].join(', ')}, #{categories[-1]}"
+      end
     end
 
     # Outputs a single category as an <a> link.
@@ -164,7 +188,7 @@ ERR
     #
     def category_link(category)
       dir = @context.registers[:site].config['category_dir']
-      "<a class='category label label-primary' href='/#{dir}/#{category.to_url}/'>#{category}</a>"
+      "<a class='category label label-primary' itemprop='articleSection keywords' href='/#{dir}/#{category.to_url}/'>#{category}</a>"
     end
 
     # Outputs the post.date as formatted html, with hooks for CSS styling.

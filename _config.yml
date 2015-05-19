@@ -6,6 +6,9 @@ url: http://kAworu.github.io/octostrap3
 title: Octostrap3 demo
 subtitle: Twitter Bootstrap theme for Octopress
 author: kAworu
+# If you want to use duckduckgo as search engine
+# use the following line for simple_search and set quack_search to true
+# simple_search: https://www.duckduckgo.com/
 simple_search: https://www.google.com/search
 description: Simple demo blog for octostrap3
 
@@ -76,6 +79,7 @@ github_user: kAworu
 github_repo_count: 4
 github_show_profile_link: true
 github_skip_forks: true
+github_skip_github_pages: false
 
 # Twitter
 twitter_user:
@@ -107,3 +111,9 @@ google_analytics_tracking_id:
 
 # Facebook Like
 facebook_like: true
+
+# Duckduckgo as search engine
+quack_search: false
+
+# Yandex Metrika
+yandex_metrika_tracking_id:
