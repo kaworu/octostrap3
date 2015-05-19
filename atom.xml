@@ -4,7 +4,7 @@
   <title><![CDATA[Octostrap3 demo]]></title>
   <link href="http://kAworu.github.io/octostrap3/atom.xml" rel="self"/>
   <link href="http://kAworu.github.io/octostrap3/"/>
-  <updated>2015-01-26T09:25:57+01:00</updated>
+  <updated>2015-05-19T13:03:32+02:00</updated>
   <id>http://kAworu.github.io/octostrap3/</id>
   <author>
     <name><![CDATA[kAworu]]></name>
@@ -109,7 +109,7 @@ site.</p>
     <content type="html"><![CDATA[<p><strong>Twitter Bootstrap 3.1</strong> has been released just a few days ago. This new
 version brings improvements in every areas from documentation and examples to
 build process and <a href="http://sass-lang.com/">SASS</a> support. It&rsquo;s also the first release under the MIT
-License which will allow GPL&#8217;ed projects (like <a href="https://drupal.org/">Drupal</a>) to include
+License which will allow GPL'ed projects (like <a href="https://drupal.org/">Drupal</a>) to include
 Bootstrap. As always the release is welcomed by an awesome video, so you better
 <a href="http://blog.getbootstrap.com/2014/01/30/bootstrap-3-1-0-released/">check it out</a>.</p>
 
@@ -231,7 +231,7 @@ index 4a88bb1..8f5fdc1 100644
     <link href="http://kAworu.github.io/octostrap3/blog/2013/11/23/github-page/"/>
     <updated>2013-11-23T14:39:00+01:00</updated>
     <id>http://kAworu.github.io/octostrap3/blog/2013/11/23/github-page</id>
-    <content type="html"><![CDATA[<p><img class="no-border pull-right" src="http://kAworu.github.io/octostrap3/images/GitHub-Mark.png" title="GitHub logo" ></p>
+    <content type="html"><![CDATA[<p><img class="no-border pull-right" src="http://kAworu.github.io/octostrap3/images/GitHub-Mark.png" title="GitHub logo" alt="GitHub logo"></p>
 
 <p>There is <a href="http://kAworu.github.io/octostrap3/github-page-example">a new &ldquo;GitHub Page&rdquo;</a> kinda like
 the GitHub sidebar, but with more extensive informations.</p>

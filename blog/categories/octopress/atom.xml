@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Octostrap3 demo]]></title>
   <link href="http://kAworu.github.io/octostrap3/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://kAworu.github.io/octostrap3/"/>
-  <updated>2015-01-26T09:25:57+01:00</updated>
+  <updated>2015-05-19T13:03:32+02:00</updated>
   <id>http://kAworu.github.io/octostrap3/</id>
   <author>
     <name><![CDATA[kAworu]]></name>
@@ -18,20 +18,33 @@
     <link href="http://kAworu.github.io/octostrap3/blog/2013/11/23/github-page/"/>
     <updated>2013-11-23T14:39:00+01:00</updated>
     <id>http://kAworu.github.io/octostrap3/blog/2013/11/23/github-page</id>
-    <content type="html"><![CDATA[<p><img class="no-border pull-right" src="/images/GitHub-Mark.png" title="GitHub logo" ></p>
+    <content type="html"><![CDATA[<p><img class="no-border pull-right" src="http://kAworu.github.io/octostrap3/images/GitHub-Mark.png" title="GitHub logo" alt="GitHub logo"></p>
 
-<p>There is <a href="/github-page-example">a new &ldquo;GitHub Page&rdquo;</a> kinda like
+
+
+
+<p>There is <a href="http://kAworu.github.io/octostrap3/github-page-example">a new &ldquo;GitHub Page&rdquo;</a> kinda like
 the GitHub sidebar, but with more extensive informations.</p>
+
+
+
 
 <p>It has been based on <a href="http://carlboettiger.info/software.html">this one</a> but modified in order to ouput bootstrap
 classes (and also use the GitHub account information from octopress config). As
 such, it can be used with any octopress/boostrap3 theme (and only a very few
 modifications are needed to &ldquo;untie&rdquo; it from octopress).</p>
 
+
+
+
 <p>If it suits you, the page&rsquo;s source (as all this blog&rsquo;s code) can be found
 <a href="https://github.com/kAworu/octostrap3/blob/gh-pages-src/source/github-page-example/index.html">here</a>. In addition to Bootstrap3 &amp; jQuery, you&rsquo;ll need <code>strftime.js</code>.</p>
 
+
+
+
 <p>Kudo to Jean Pierre for the idea :)</p>
+
 ]]></content>
   </entry>
   
@@ -42,6 +55,9 @@ modifications are needed to &ldquo;untie&rdquo; it from octopress).</p>
     <id>http://kAworu.github.io/octostrap3/blog/2013/10/03/category-list-aside</id>
     <content type="html"><![CDATA[<p>The code for the awesome category list you can see in the <code>aside</code>
 <a href="#" id="category-list-pointer">here</a>.</p>
+
+
+
 
 <script>
 jQuery(document).ready(function ($) {
@@ -55,7 +71,12 @@ jQuery(document).ready(function ($) {
 </script>
 
 
+
+
 <p>It will:</p>
+
+
+
 
 <ul>
 <li>display <em>all</em> your categories with a post counter (using Bootstrap&rsquo;s <code>badge</code>
@@ -63,6 +84,8 @@ class)</li>
 <li>highlight when you&rsquo;re on the matching category page</li>
 <li>be installed in 3 minutes !</li>
 </ul>
+
+
 
 
 <!-- more -->
@@ -73,9 +96,14 @@ class)</li>
 <h2>The Trick</h2>
 
 
+
+
 <p>OK, here it is:</p>
 
-<p><figure class='code panel panel-default'><figcaption class='panel-heading'><h3 class='panel-title'> (category_list.html)</h3> <a href='/downloads/code/category_list.html'>download</a></figcaption>
+
+
+
+<figure class='code panel panel-default'><figcaption class='panel-heading'><h3 class='panel-title'> (category_list.html)</h3> <a href='http://kAworu.github.io/octostrap3/downloads/code/category_list.html'>download</a></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -104,12 +132,18 @@ class)</li>
 </span><span class='line'>    <span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
 </span><span class='line'>  <span class="nt">&lt;/div&gt;</span>
 </span><span class='line'><span class="nt">&lt;/section&gt;</span>
-</span></code></pre></td></tr></table></div></figure></p>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 
 <p>Put it in the <code>source/_includes/custom/asides</code> directory and then adapt your
 <code>_config.yml</code> accordingly. As example, here is how it is done on this site:</p>
 
-<p><figure class='code panel panel-default'><figcaption class='panel-heading'><h3 class='panel-title'>_config.yml </h3></figcaption>
+
+
+
+<figure class='code panel panel-default'><figcaption class='panel-heading'><h3 class='panel-title'>_config.yml </h3></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -129,50 +163,29 @@ class)</li>
 <span class='line-number'>17</span>
 <span class='line-number'>18</span>
 <span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="l-Scalar-Plain">&lt;/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="l-Scalar-Plain">&lt;h1&gt;&amp;hellip;&lt;/h1&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="l-Scalar-Plain">&lt;h1&gt;list each of the sidebar modules you want to include, in the order you want them to appear.&lt;/h1&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="l-Scalar-Plain">&lt;h1&gt;To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like &amp;lsquo;custom/asides/custom_aside_name.html&amp;rsquo;&lt;/h1&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="l-Scalar-Plain">&lt;p&gt;default_asides</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span>
+</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="c1"># ...</span>
+</span><span class='line'><span class="c1"># list each of the sidebar modules you want to include, in the order you want them to appear.</span>
+</span><span class='line'><span class="c1"># To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like &#39;custom/asides/custom_aside_name.html&#39;</span>
+</span><span class='line'><span class="l-Scalar-Plain">default_asides</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span>
 </span><span class='line'>    <span class="nv">asides/recent_posts.html</span><span class="p-Indicator">,</span>
 </span><span class='line'>    <span class="nv">custom/asides/category_list.html</span>
-</span><span class='line'><span class="p-Indicator">]</span><span class="l-Scalar-Plain">&lt;/p&gt;</span>
+</span><span class='line'><span class="p-Indicator">]</span>
 </span><span class='line'>
-</span><span class='line'><span class="l-Scalar-Plain">&lt;h1&gt;Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below&lt;/h1&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="l-Scalar-Plain">&lt;h1&gt;and add an array with the asides you want to use.&lt;/h1&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="l-Scalar-Plain">&lt;p&gt;blog_index_asides</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span>
+</span><span class='line'><span class="c1"># Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below</span>
+</span><span class='line'><span class="c1"># and add an array with the asides you want to use.</span>
+</span><span class='line'><span class="l-Scalar-Plain">blog_index_asides</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span>
 </span><span class='line'>    <span class="nv">asides/what_is_octostrap3.html</span><span class="p-Indicator">,</span>
 </span><span class='line'>    <span class="nv">asides/recent_posts.html</span><span class="p-Indicator">,</span>
 </span><span class='line'>    <span class="nv">custom/asides/category_list.html</span><span class="p-Indicator">,</span>
 </span><span class='line'>    <span class="nv">asides/github.html</span>
-</span><span class='line'><span class="p-Indicator">]</span><span class="l-Scalar-Plain">&lt;/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="l-Scalar-Plain">&lt;h1&gt;post_asides:&lt;/h1&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="l-Scalar-Plain">&lt;h1&gt;page_asides:&lt;/h1&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="l-Scalar-Plain">&lt;h1&gt;&amp;hellip;&lt;/h1&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="l-Scalar-Plain">&lt;p&gt;</span>
-</span></code></pre></td></tr></table></div></figure></p>
+</span><span class='line'><span class="p-Indicator">]</span>
+</span><span class='line'><span class="c1"># post_asides:</span>
+</span><span class='line'><span class="c1"># page_asides:</span>
+</span><span class='line'><span class="c1"># ...</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 ]]></content>
   </entry>
   
@@ -185,6 +198,9 @@ class)</li>
 &ldquo;active&rdquo; element highlighted which ease navigation. In <strong>Octostrap3</strong> it is
 possible to control which menu is selected on each page or post.</p>
 
+
+
+
 <!-- more -->
 
 
@@ -193,9 +209,15 @@ possible to control which menu is selected on each page or post.</p>
 <h2>The Trick</h2>
 
 
+
+
 <p>We will use (again) a
 <a href="http://jekyllrb.com/docs/frontmatter/">front-matter variable</a>. If you check in
-<code>source/_includes/custom/navigation.html</code> the menu looks like this:
+<code>source/_includes/custom/navigation.html</code> the menu looks like this:</p>
+
+
+
+
 <figure class='code panel panel-default'><figcaption class='panel-heading'><h3 class='panel-title'>source/_includes/custom/navigation.html </h3></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -207,16 +229,8 @@ possible to control which menu is selected on each page or post.</p>
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
 <span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="c">&lt;!-- ... --&gt;</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="nt">&lt;p&gt;&lt;div</span> <span class="na">class=</span><span class="s">&quot;navbar-collapse collapse&quot;</span><span class="nt">&gt;</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="c">&lt;!-- ... --&gt;</span>
+</span><span class='line'><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;navbar-collapse collapse&quot;</span><span class="nt">&gt;</span>
 </span><span class='line'>  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav navbar-nav&quot;</span><span class="nt">&gt;</span>
 </span><span class='line'>    <span class="nt">&lt;li</span> <span class="err">{%</span> <span class="na">if</span> <span class="na">page</span><span class="err">.</span><span class="na">navbar =</span><span class="s">=</span> <span class="err">&#39;</span><span class="na">Blog</span><span class="err">&#39;</span> <span class="err">%}</span><span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="err">{%</span> <span class="na">endif</span> <span class="err">%}</span><span class="nt">&gt;</span>
 </span><span class='line'>      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ root_url }}/&quot;</span><span class="nt">&gt;</span>Blog<span class="nt">&lt;/a&gt;</span>
@@ -225,14 +239,20 @@ possible to control which menu is selected on each page or post.</p>
 </span><span class='line'>      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ root_url }}/blog/archives&quot;</span><span class="nt">&gt;</span>Archives<span class="nt">&lt;/a&gt;</span>
 </span><span class='line'>    <span class="nt">&lt;/li&gt;</span>
 </span><span class='line'><span class="c">&lt;!-- ... --&gt;</span>
-</span></code></pre></td></tr></table></div></figure></p>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 
 <p>By default, <code>page.navbar</code> is <em>&lsquo;Blog&rsquo;</em> for the blog index page and each
 posts. You can set it yourself easily in the <strong>front-matter</strong> (for
 pages or even posts if you want).  This example is from the
-<a href="/setup/install">installation</a> page:</p>
+<a href="http://kAworu.github.io/octostrap3/setup/install">installation</a> page:</p>
 
-<h2><figure class='code panel panel-default'><figcaption class='panel-heading'><h3 class='panel-title'>installation page front-matter </h3></figcaption>
+
+
+
+<figure class='code panel panel-default'><figcaption class='panel-heading'><h3 class='panel-title'>installation page front-matter </h3></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -241,22 +261,20 @@ pages or even posts if you want).  This example is from the
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/h2>
-</span><span class='line'>
-</span><span class='line'>&lt;p>layout: page
+</pre></td><td class='code'><pre><code class=''><span class='line'>---
+</span><span class='line'>layout: page
 </span><span class='line'>navbar: Setup
-</span><span class='line'>title: &ldquo;Installation&rdquo;
+</span><span class='line'>title: "Installation"
 </span><span class='line'>comments: true
-</span><span class='line'>sharing: true&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;h2>footer: true&lt;/h2>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></p>
+</span><span class='line'>sharing: true
+</span><span class='line'>footer: true
+</span><span class='line'>---</span></code></pre></td></tr></table></div></figure>
+
+
+
 
 <p>Enjoy !</p>
+
 ]]></content>
   </entry>
   
@@ -273,9 +291,14 @@ pages or even posts if you want).  This example is from the
 </div>
 
 
+
+
 <p>As you can see on this page, it is possible to have a different theme for a
 given page or post (this one is the mighty
 <a href="http://bootswatch.com/flatly/bootstrap.min.css">flatty</a>)&nbsp;!</p>
+
+
+
 
 <!-- more -->
 
@@ -294,10 +317,15 @@ given page or post (this one is the mighty
 <h2>The Trick</h2>
 
 
+
+
 <p>We will use a <a href="http://jekyllrb.com/docs/frontmatter/">front-matter variable</a> to
 select the theme to use. First, adapt <code>source/_includes/custom/head.html</code>:</p>
 
-<p><figure class='code panel panel-default'><figcaption class='panel-heading'><h3 class='panel-title'>source/_includes/custom/head.html </h3></figcaption>
+
+
+
+<figure class='code panel panel-default'><figcaption class='panel-heading'><h3 class='panel-title'>source/_includes/custom/head.html </h3></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -308,38 +336,28 @@ select the theme to use. First, adapt <code>source/_includes/custom/head.html</c
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
 <span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;/p&gt;</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="c">&lt;!-- ... --&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="c">&lt;!-- ... --&gt;</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="nt">&lt;p&gt;</span>
 </span><span class='line'>{% if page.bootstrap_theme_url %}
 </span><span class='line'>  <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;{{ page.bootstrap_theme_url }}&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span><span class="nt">&gt;</span>
 </span><span class='line'>{% else %}
 </span><span class='line'>  <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;{{ root_url }}/assets/bootstrap/dist/css/bootstrap.min.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span><span class="nt">&gt;</span>
 </span><span class='line'>  <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;{{ root_url }}/assets/bootstrap/dist/css/bootstrap-theme.min.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span><span class="nt">&gt;</span>
 </span><span class='line'>{% endif %}
-</span><span class='line'><span class="nt">&lt;/p&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="c">&lt;!-- ... --&gt;</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="nt">&lt;p&gt;</span>
-</span></code></pre></td></tr></table></div></figure></p>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 
 <p>Now, the Bootstrap theme will be choosen depending on
 <code>page.bootstrap_theme_url</code>. As an example, here is the front of this page:</p>
 
-<h2><figure class='code panel panel-default'><figcaption class='panel-heading'><h3 class='panel-title'>example front </h3></figcaption>
+
+
+
+<figure class='code panel panel-default'><figcaption class='panel-heading'><h3 class='panel-title'>example front </h3></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -347,19 +365,16 @@ select the theme to use. First, adapt <code>source/_includes/custom/head.html</c
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/h2>
-</span><span class='line'>
-</span><span class='line'>&lt;p>layout: post
-</span><span class='line'>bootstrap_theme_url: &lt;a href="http://bootswatch.com/flatly/bootstrap.min.css">http://bootswatch.com/flatly/bootstrap.min.css&lt;/a>
-</span><span class='line'>title: &ldquo;pick a theme for only one page&rdquo;
-</span><span class='line'>comments: true&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;h2>categories: octopress&lt;/h2>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></p>
+</pre></td><td class='code'><pre><code class=''><span class='line'>---
+</span><span class='line'>layout: post
+</span><span class='line'>bootstrap_theme_url: http://bootswatch.com/flatly/bootstrap.min.css
+</span><span class='line'>title: "pick a theme for only one page"
+</span><span class='line'>comments: true
+</span><span class='line'>categories: octopress
+</span><span class='line'>---</span></code></pre></td></tr></table></div></figure>
+
+
+
 ]]></content>
   </entry>
   

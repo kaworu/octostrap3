@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Github | Octostrap3 demo]]></title>
   <link href="http://kAworu.github.io/octostrap3/blog/categories/github/atom.xml" rel="self"/>
   <link href="http://kAworu.github.io/octostrap3/"/>
-  <updated>2015-01-26T09:25:57+01:00</updated>
+  <updated>2015-05-19T13:03:32+02:00</updated>
   <id>http://kAworu.github.io/octostrap3/</id>
   <author>
     <name><![CDATA[kAworu]]></name>
@@ -18,20 +18,33 @@
     <link href="http://kAworu.github.io/octostrap3/blog/2013/11/23/github-page/"/>
     <updated>2013-11-23T14:39:00+01:00</updated>
     <id>http://kAworu.github.io/octostrap3/blog/2013/11/23/github-page</id>
-    <content type="html"><![CDATA[<p><img class="no-border pull-right" src="/images/GitHub-Mark.png" title="GitHub logo" ></p>
+    <content type="html"><![CDATA[<p><img class="no-border pull-right" src="http://kAworu.github.io/octostrap3/images/GitHub-Mark.png" title="GitHub logo" alt="GitHub logo"></p>
 
-<p>There is <a href="/github-page-example">a new &ldquo;GitHub Page&rdquo;</a> kinda like
+
+
+
+<p>There is <a href="http://kAworu.github.io/octostrap3/github-page-example">a new &ldquo;GitHub Page&rdquo;</a> kinda like
 the GitHub sidebar, but with more extensive informations.</p>
+
+
+
 
 <p>It has been based on <a href="http://carlboettiger.info/software.html">this one</a> but modified in order to ouput bootstrap
 classes (and also use the GitHub account information from octopress config). As
 such, it can be used with any octopress/boostrap3 theme (and only a very few
 modifications are needed to &ldquo;untie&rdquo; it from octopress).</p>
 
+
+
+
 <p>If it suits you, the page&rsquo;s source (as all this blog&rsquo;s code) can be found
 <a href="https://github.com/kAworu/octostrap3/blob/gh-pages-src/source/github-page-example/index.html">here</a>. In addition to Bootstrap3 &amp; jQuery, you&rsquo;ll need <code>strftime.js</code>.</p>
 
+
+
+
 <p>Kudo to Jean Pierre for the idea :)</p>
+
 ]]></content>
   </entry>
   
