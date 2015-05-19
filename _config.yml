@@ -64,8 +64,7 @@ default_asides: [
 blog_index_asides: [
     custom/asides/what_is_octostrap3.html,
     asides/recent_posts.html,
-    custom/asides/category_list.html,
-    asides/github.html
+    custom/asides/category_list.html
 ]
 # post_asides:
 # page_asides:
