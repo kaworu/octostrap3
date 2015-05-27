@@ -4,7 +4,7 @@
   <title><![CDATA[Octostrap3 demo]]></title>
   <link href="http://kAworu.github.io/octostrap3/atom.xml" rel="self"/>
   <link href="http://kAworu.github.io/octostrap3/"/>
-  <updated>2015-05-19T13:04:55+02:00</updated>
+  <updated>2015-05-27T09:48:27+02:00</updated>
   <id>http://kAworu.github.io/octostrap3/</id>
   <author>
     <name><![CDATA[kAworu]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Octostrap 3.3.4 Release]]></title>
+    <link href="http://kAworu.github.io/octostrap3/blog/2015/05/27/octostrap-3-dot-3-4-release/"/>
+    <updated>2015-05-27T09:43:50+02:00</updated>
+    <id>http://kAworu.github.io/octostrap3/blog/2015/05/27/octostrap-3-dot-3-4-release</id>
+    <content type="html"><![CDATA[<p>A bit behind <a href="http://blog.getbootstrap.com/2015/03/16/bootstrap-3-3-4-released/">Twitter Bootstrap</a>,
+<a href="https://github.com/kAworu/octostrap3/releases/tag/v3.3.4">Octostrap 3.3.4 is out</a>!</p>
+
+<p>This release brings several fixes (most notably the google search), jQuery and
+Modernizr update, and a better Gist integration.</p>
+
+<p>Have fun :)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Octostrap 3.3.2 Release]]></title>
