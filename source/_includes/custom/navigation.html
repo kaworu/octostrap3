@@ -36,16 +36,6 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                {% if site.simple_search %}
-                    <li>
-                        <form class="search navbar-form navbar-right" action="{{ site.simple_search }}" method="GET">
-                            <input type="hidden" name="sitesearch" value="{{ site.url | shorthand_url }}">
-                            <div class="form-group">
-                                <input class="form-control" type="text" name="q" placeholder="Search">
-                            </div>
-                        </form>
-                    </li>
-                {% endif %}
                 <li>
                     <a class="subscribe-rss" href="{{ site.subscribe_rss }}" title="subscribe via RSS">
                         <span class="visible-xs">RSS</span>
@@ -61,6 +51,14 @@
                 </li>
                 {% endif %}
             </ul>
+            {% if site.simple_search %}
+                <form class="navbar-form navbar-right" action="{{ site.simple_search }}" method="GET">
+                    <input type="hidden" name="sitesearch" value="{{ site.url | shorthand_url }}">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="q" placeholder="Search">
+                    </div>
+                </form>
+            {% endif %}
         </div>
     </div>
 </nav>
