@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://kAworu.github.io/octostrap3/blog/2016/01/13/octostrap-3-dot-3-6-release/</loc>
+    <lastmod>2016-01-13T09:47:45+01:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>http://kAworu.github.io/octostrap3/blog/2015/05/27/octostrap-3-dot-3-4-release/</loc>
     <lastmod>2015-05-27T09:43:50+02:00</lastmod>
     <priority>0.8</priority>
@@ -42,43 +47,43 @@
   </url>
   <url>
     <loc>http://kAworu.github.io/octostrap3/github-page-example/</loc>
-    <lastmod>2015-05-27T09:48:27+02:00</lastmod>
+    <lastmod>2016-01-13T10:36:30+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://kAworu.github.io/octostrap3/blog/archives/</loc>
-    <lastmod>2015-05-27T09:48:27+02:00</lastmod>
+    <lastmod>2016-01-13T10:36:30+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://kAworu.github.io/octostrap3/</loc>
-    <lastmod>2015-05-27T09:48:27+02:00</lastmod>
+    <lastmod>2016-01-13T10:36:30+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://kAworu.github.io/octostrap3/setup/pick-a-theme/</loc>
-    <lastmod>2015-05-27T09:48:27+02:00</lastmod>
+    <lastmod>2016-01-13T10:36:30+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://kAworu.github.io/octostrap3/setup/octopatch/</loc>
-    <lastmod>2015-05-27T09:48:27+02:00</lastmod>
+    <lastmod>2016-01-13T10:36:30+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://kAworu.github.io/octostrap3/setup/install/</loc>
-    <lastmod>2015-05-27T09:48:27+02:00</lastmod>
+    <lastmod>2016-01-13T10:36:30+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://kAworu.github.io/octostrap3/about/</loc>
-    <lastmod>2015-05-27T09:48:27+02:00</lastmod>
+    <lastmod>2016-01-13T10:36:30+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

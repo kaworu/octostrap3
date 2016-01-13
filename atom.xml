@@ -4,7 +4,7 @@
   <title><![CDATA[Octostrap3 demo]]></title>
   <link href="http://kAworu.github.io/octostrap3/atom.xml" rel="self"/>
   <link href="http://kAworu.github.io/octostrap3/"/>
-  <updated>2015-05-27T09:48:27+02:00</updated>
+  <updated>2016-01-13T10:36:30+01:00</updated>
   <id>http://kAworu.github.io/octostrap3/</id>
   <author>
     <name><![CDATA[kAworu]]></name>
@@ -12,6 +12,18 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Octostrap 3.3.6 Release]]></title>
+    <link href="http://kAworu.github.io/octostrap3/blog/2016/01/13/octostrap-3-dot-3-6-release/"/>
+    <updated>2016-01-13T09:47:45+01:00</updated>
+    <id>http://kAworu.github.io/octostrap3/blog/2016/01/13/octostrap-3-dot-3-6-release</id>
+    <content type="html"><![CDATA[<p>Long waited release based on <a href="https://blog.getbootstrap.com/2015/11/24/bootstrap-3-3-6-released/">Twitter Bootstrap 3.3.6</a>,
+<a href="https://github.com/kAworu/octostrap3/releases/tag/v3.3.6">Octostrap 3.3.4 is out</a>!</p>
+
+<p>Happy new year by the way :)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Octostrap 3.3.4 Release]]></title>

@@ -36,7 +36,7 @@
 
 
   
-  <link href="/octostrap3/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/octostrap3/stylesheets/screen.css" media="screen, projection, print" rel="stylesheet" type="text/css">
 
   
 
@@ -84,16 +84,6 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                
-                    <li>
-                        <form class="search navbar-form navbar-right" action="https://www.google.com/search" method="GET">
-                            <input type="hidden" name="sitesearch" value="kAworu.github.io/octostrap3">
-                            <div class="form-group">
-                                <input class="form-control" type="text" name="q" placeholder="Search">
-                            </div>
-                        </form>
-                    </li>
-                
                 <li>
                     <a class="subscribe-rss" href="/octostrap3/atom.xml" title="subscribe via RSS">
                         <span class="visible-xs">RSS</span>
@@ -102,6 +92,14 @@
                 </li>
                 
             </ul>
+            
+                <form class="navbar-form navbar-right" action="https://www.google.com/search" method="GET">
+                    <input type="hidden" name="sitesearch" value="kAworu.github.io/octostrap3">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="q" placeholder="Search">
+                    </div>
+                </form>
+            
         </div>
     </div>
 </nav>
@@ -117,6 +115,74 @@
     <meta itemprop="description" content="Simple demo blog for octostrap3" />
     <meta itemprop="url" content="http://kAworu.github.io/octostrap3" />
       
+      
+      
+        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2013-10-03T23:27:00+02:00"  data-updated="true" itemprop="datePublished dateCreated">Thu  3 Oct 2013, 11:27 PM</time>
+        
+           | <a href="/octostrap3/blog/2013/10/03/category-list-aside/#disqus_thread" itemprop="discussionUrl"
+             data-disqus-identifier="http://kAworu.github.io/octostrap3/blog/2013/10/03/category-list-aside/">Comments</a>
+        
+      </p>
+    
+    
+      <h2 class="entry-title" itemprop="name headline"><a href="/octostrap3/blog/2013/10/03/category-list-aside/" itemprop="url">Category List Aside</a></h2>
+    
+  </header>
+
+
+  <div class="entry-content clearfix" itemprop="articleBody description"><p>The code for the awesome category list you can see in the <code>aside</code>
+<a href="#" id="category-list-pointer">here</a>.</p>
+
+<script>
+jQuery(document).ready(function ($) {
+    $('#category-list-pointer').click(function (event) {
+        event.preventDefault(); // don't follow href
+        // XXX: ugly, should have an id.
+        var $target = $('h3.panel-title:contains(Categories)').closest('.panel');
+        $target.css({opacity: 0}).animate({opacity: 1}, 700);
+    });
+});
+</script>
+
+
+<p>It will:</p>
+
+<ul>
+<li>display <em>all</em> your categories with a post counter (using Bootstrap&rsquo;s <code>badge</code>
+class)</li>
+<li>highlight when you&rsquo;re on the matching category page</li>
+<li>be installed in 3 minutes !</li>
+</ul>
+
+
+</div>
+  
+  
+    <footer>
+      <a class="read-more btn btn-default" href="/octostrap3/blog/2013/10/03/category-list-aside/">Read on &rarr;</a>
+    </footer>
+  
+
+
+        </article>
       
       
         <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -264,13 +330,13 @@ given page or post (this one is the mighty
   
   <div id="recent_posts" class="list-group">
     
+    <a class="list-group-item " href="/octostrap3/blog/2016/01/13/octostrap-3-dot-3-6-release/">Octostrap 3.3.6 Release</a>
+    
     <a class="list-group-item " href="/octostrap3/blog/2015/05/27/octostrap-3-dot-3-4-release/">Octostrap 3.3.4 Release</a>
     
     <a class="list-group-item " href="/octostrap3/blog/2015/01/23/octostrap-3-dot-3-2-release/">Octostrap 3.3.2 Release</a>
     
     <a class="list-group-item " href="/octostrap3/blog/2014/07/23/octostrap-3-dot-2-0-release/">Octostrap 3.2.0 Release</a>
-    
-    <a class="list-group-item " href="/octostrap3/blog/2014/02/03/octostrap-3-dot-1-is-out/">Octostrap 3.1 Is Out</a>
     
   </div>
 </section>
@@ -305,7 +371,7 @@ given page or post (this one is the mighty
     </div>
     <footer role="contentinfo"><div class="container">
     <p class="text-muted credits">
-  Copyright &copy; 2015 - <a href="https://kaworu.ch" title="kAworu's blog">kAworu</a><br>
+  Copyright &copy; 2016 - <a href="https://kaworu.ch" title="kAworu's blog">kAworu</a><br>
   <small>
       <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>,
       <span class="credit">customized with <a href="https://github.com/kAworu/octostrap3">octostrap3</a></span>.
