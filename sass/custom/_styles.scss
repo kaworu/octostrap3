@@ -19,6 +19,25 @@ footer[role=contentinfo] {
     height: 60px;
 }
 
+/* print page content only no header, footer and asides, works with any page layout */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  /* use .no-print if you want to hide something inside page-content from printing */
+  .no-print, .no-print * {
+    display: none !important;
+  }
+  .page-content, .page-content * {
+    visibility: visible;
+  }
+  .page-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
 /* fork me on github ribbon */
 #fork-me-on-github-ribbon {
     /* bellow 1440~ the ribbon goes over the RSS link :( */
