@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Octostrap3 demo]]></title>
-  <link href="http://kAworu.github.io/octostrap3/atom.xml" rel="self"/>
-  <link href="http://kAworu.github.io/octostrap3/"/>
-  <updated>2016-01-13T10:36:30+01:00</updated>
-  <id>http://kAworu.github.io/octostrap3/</id>
+  <link href="https://kaworu.github.io/octostrap3/atom.xml" rel="self"/>
+  <link href="https://kaworu.github.io/octostrap3/"/>
+  <updated>2016-04-22T15:34:30+02:00</updated>
+  <id>https://kaworu.github.io/octostrap3/</id>
   <author>
     <name><![CDATA[kAworu]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Octostrap 3.3.6 Release]]></title>
-    <link href="http://kAworu.github.io/octostrap3/blog/2016/01/13/octostrap-3-dot-3-6-release/"/>
+    <link href="https://kaworu.github.io/octostrap3/blog/2016/01/13/octostrap-3-dot-3-6-release/"/>
     <updated>2016-01-13T09:47:45+01:00</updated>
-    <id>http://kAworu.github.io/octostrap3/blog/2016/01/13/octostrap-3-dot-3-6-release</id>
+    <id>https://kaworu.github.io/octostrap3/blog/2016/01/13/octostrap-3-dot-3-6-release</id>
     <content type="html"><![CDATA[<p>Long waited release based on <a href="https://blog.getbootstrap.com/2015/11/24/bootstrap-3-3-6-released/">Twitter Bootstrap 3.3.6</a>,
 <a href="https://github.com/kAworu/octostrap3/releases/tag/v3.3.6">Octostrap 3.3.4 is out</a>!</p>
 
@@ -27,9 +27,9 @@
   
   <entry>
     <title type="html"><![CDATA[Octostrap 3.3.4 Release]]></title>
-    <link href="http://kAworu.github.io/octostrap3/blog/2015/05/27/octostrap-3-dot-3-4-release/"/>
+    <link href="https://kaworu.github.io/octostrap3/blog/2015/05/27/octostrap-3-dot-3-4-release/"/>
     <updated>2015-05-27T09:43:50+02:00</updated>
-    <id>http://kAworu.github.io/octostrap3/blog/2015/05/27/octostrap-3-dot-3-4-release</id>
+    <id>https://kaworu.github.io/octostrap3/blog/2015/05/27/octostrap-3-dot-3-4-release</id>
     <content type="html"><![CDATA[<p>A bit behind <a href="http://blog.getbootstrap.com/2015/03/16/bootstrap-3-3-4-released/">Twitter Bootstrap</a>,
 <a href="https://github.com/kAworu/octostrap3/releases/tag/v3.3.4">Octostrap 3.3.4 is out</a>!</p>
 
@@ -42,9 +42,9 @@ Modernizr update, and a better Gist integration.</p>
   
   <entry>
     <title type="html"><![CDATA[Octostrap 3.3.2 Release]]></title>
-    <link href="http://kAworu.github.io/octostrap3/blog/2015/01/23/octostrap-3-dot-3-2-release/"/>
+    <link href="https://kaworu.github.io/octostrap3/blog/2015/01/23/octostrap-3-dot-3-2-release/"/>
     <updated>2015-01-23T10:49:08+01:00</updated>
-    <id>http://kAworu.github.io/octostrap3/blog/2015/01/23/octostrap-3-dot-3-2-release</id>
+    <id>https://kaworu.github.io/octostrap3/blog/2015/01/23/octostrap-3-dot-3-2-release</id>
     <content type="html"><![CDATA[<p>Trying to keep up to date with
 <a href="http://blog.getbootstrap.com/2015/01/19/bootstrap-3-3-2-released/">Twitter Bootstrap</a>,
 <a href="https://github.com/kAworu/octostrap3/releases/tag/v3.3.2">here is a release for the 3.3.2 version</a>.
@@ -54,7 +54,7 @@ As usual a lot of good stuff happened, here is a quick summary.</p>
 
 <p><strong>Octostrap3</strong> is just an Octopress theme. Sadly, Octopress does not let the
 theme handle all the HTML generation and rendering (that&rsquo;s why we have to
-<a href="http://kAworu.github.io/octostrap3/setup/octopatch">patch Octopress</a> for some features). The
+<a href="https://kaworu.github.io/octostrap3/setup/octopatch">patch Octopress</a> for some features). The
 latest issue is the date formating, which has already been discussed at length
 <a href="https://github.com/kAworu/octostrap3/commit/a719bb0bef43a212efd09c74ce07e4e35153635f">here</a>
 and
@@ -92,9 +92,9 @@ about you !</p>
   
   <entry>
     <title type="html"><![CDATA[Octostrap 3.2.0 Release]]></title>
-    <link href="http://kAworu.github.io/octostrap3/blog/2014/07/23/octostrap-3-dot-2-0-release/"/>
+    <link href="https://kaworu.github.io/octostrap3/blog/2014/07/23/octostrap-3-dot-2-0-release/"/>
     <updated>2014-07-23T14:51:10+02:00</updated>
-    <id>http://kAworu.github.io/octostrap3/blog/2014/07/23/octostrap-3-dot-2-0-release</id>
+    <id>https://kaworu.github.io/octostrap3/blog/2014/07/23/octostrap-3-dot-2-0-release</id>
     <content type="html"><![CDATA[<p>As usual, <a href="http://blog.getbootstrap.com/2014/06/26/bootstrap-3-2-0-released/">new Twitter Bootstrap</a> release means new <strong>Octostrap3</strong>
 release. This time <strong>Octostrap3</strong> also bring some new stuff in, thanks to
 various contributors.</p>
@@ -130,9 +130,9 @@ site.</p>
   
   <entry>
     <title type="html"><![CDATA[Octostrap 3.1 Is Out]]></title>
-    <link href="http://kAworu.github.io/octostrap3/blog/2014/02/03/octostrap-3-dot-1-is-out/"/>
+    <link href="https://kaworu.github.io/octostrap3/blog/2014/02/03/octostrap-3-dot-1-is-out/"/>
     <updated>2014-02-03T16:47:32+01:00</updated>
-    <id>http://kAworu.github.io/octostrap3/blog/2014/02/03/octostrap-3-dot-1-is-out</id>
+    <id>https://kaworu.github.io/octostrap3/blog/2014/02/03/octostrap-3-dot-1-is-out</id>
     <content type="html"><![CDATA[<p><strong>Twitter Bootstrap 3.1</strong> has been released just a few days ago. This new
 version brings improvements in every areas from documentation and examples to
 build process and <a href="http://sass-lang.com/">SASS</a> support. It&rsquo;s also the first release under the MIT
@@ -183,7 +183,7 @@ index 4a88bb1..8f5fdc1 100644
 
 
 
-<figure class='code panel panel-default'><figcaption class='panel-heading'><h3 class='panel-title'> (0001-make_inet_socket-Use-SO_NOSIGPIPE-when-creating-a-cl.patch)</h3> <a href='http://kAworu.github.io/octostrap3/downloads/code/0001-make_inet_socket-Use-SO_NOSIGPIPE-when-creating-a-cl.patch'>download</a></figcaption>
+<figure class='code panel panel-default'><figcaption class='panel-heading'><h3 class='panel-title'> (0001-make_inet_socket-Use-SO_NOSIGPIPE-when-creating-a-cl.patch)</h3> <a href='https://kaworu.github.io/octostrap3/downloads/code/0001-make_inet_socket-Use-SO_NOSIGPIPE-when-creating-a-cl.patch'>download</a></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -255,12 +255,12 @@ index 4a88bb1..8f5fdc1 100644
   
   <entry>
     <title type="html"><![CDATA[GitHub Page]]></title>
-    <link href="http://kAworu.github.io/octostrap3/blog/2013/11/23/github-page/"/>
+    <link href="https://kaworu.github.io/octostrap3/blog/2013/11/23/github-page/"/>
     <updated>2013-11-23T14:39:00+01:00</updated>
-    <id>http://kAworu.github.io/octostrap3/blog/2013/11/23/github-page</id>
-    <content type="html"><![CDATA[<p><img class="no-border pull-right" src="http://kAworu.github.io/octostrap3/images/GitHub-Mark.png" title="GitHub logo" alt="GitHub logo"></p>
+    <id>https://kaworu.github.io/octostrap3/blog/2013/11/23/github-page</id>
+    <content type="html"><![CDATA[<p><img class="no-border pull-right" src="https://kaworu.github.io/octostrap3/images/GitHub-Mark.png" title="GitHub logo" alt="GitHub logo"></p>
 
-<p>There is <a href="http://kAworu.github.io/octostrap3/github-page-example">a new &ldquo;GitHub Page&rdquo;</a> kinda like
+<p>There is <a href="https://kaworu.github.io/octostrap3/github-page-example">a new &ldquo;GitHub Page&rdquo;</a> kinda like
 the GitHub sidebar, but with more extensive informations.</p>
 
 <p>It has been based on <a href="http://carlboettiger.info/software.html">this one</a> but modified in order to ouput bootstrap
@@ -277,9 +277,9 @@ modifications are needed to &ldquo;untie&rdquo; it from octopress).</p>
   
   <entry>
     <title type="html"><![CDATA[Category List Aside]]></title>
-    <link href="http://kAworu.github.io/octostrap3/blog/2013/10/03/category-list-aside/"/>
+    <link href="https://kaworu.github.io/octostrap3/blog/2013/10/03/category-list-aside/"/>
     <updated>2013-10-03T23:27:00+02:00</updated>
-    <id>http://kAworu.github.io/octostrap3/blog/2013/10/03/category-list-aside</id>
+    <id>https://kaworu.github.io/octostrap3/blog/2013/10/03/category-list-aside</id>
     <content type="html"><![CDATA[<p>The code for the awesome category list you can see in the <code>aside</code>
 <a href="#" id="category-list-pointer">here</a>.</p>
 
@@ -315,7 +315,7 @@ class)</li>
 
 <p>OK, here it is:</p>
 
-<figure class='code panel panel-default'><figcaption class='panel-heading'><h3 class='panel-title'> (category_list.html)</h3> <a href='http://kAworu.github.io/octostrap3/downloads/code/category_list.html'>download</a></figcaption>
+<figure class='code panel panel-default'><figcaption class='panel-heading'><h3 class='panel-title'> (category_list.html)</h3> <a href='https://kaworu.github.io/octostrap3/downloads/code/category_list.html'>download</a></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -396,9 +396,9 @@ class)</li>
   
   <entry>
     <title type="html"><![CDATA[Selecting the Navbar Menu]]></title>
-    <link href="http://kAworu.github.io/octostrap3/blog/2013/10/02/selecting-the-navbar-menu/"/>
+    <link href="https://kaworu.github.io/octostrap3/blog/2013/10/02/selecting-the-navbar-menu/"/>
     <updated>2013-10-02T23:43:00+02:00</updated>
-    <id>http://kAworu.github.io/octostrap3/blog/2013/10/02/selecting-the-navbar-menu</id>
+    <id>https://kaworu.github.io/octostrap3/blog/2013/10/02/selecting-the-navbar-menu</id>
     <content type="html"><![CDATA[<p>Bootstrap <a href="http://getbootstrap.com/components/#navbar">navbar</a> can have an
 &ldquo;active&rdquo; element highlighted which ease navigation. In <strong>Octostrap3</strong> it is
 possible to control which menu is selected on each page or post.</p>
@@ -442,7 +442,7 @@ possible to control which menu is selected on each page or post.</p>
 <p>By default, <code>page.navbar</code> is <em>&lsquo;Blog&rsquo;</em> for the blog index page and each
 posts. You can set it yourself easily in the <strong>front-matter</strong> (for
 pages or even posts if you want).  This example is from the
-<a href="http://kAworu.github.io/octostrap3/setup/install">installation</a> page:</p>
+<a href="https://kaworu.github.io/octostrap3/setup/install">installation</a> page:</p>
 
 <figure class='code panel panel-default'><figcaption class='panel-heading'><h3 class='panel-title'>installation page front-matter </h3></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -469,9 +469,9 @@ pages or even posts if you want).  This example is from the
   
   <entry>
     <title type="html"><![CDATA[Pick a Theme for Only One Page]]></title>
-    <link href="http://kAworu.github.io/octostrap3/blog/2013/10/02/pick-a-theme-for-only-one-page/"/>
+    <link href="https://kaworu.github.io/octostrap3/blog/2013/10/02/pick-a-theme-for-only-one-page/"/>
     <updated>2013-10-02T23:19:00+02:00</updated>
-    <id>http://kAworu.github.io/octostrap3/blog/2013/10/02/pick-a-theme-for-only-one-page</id>
+    <id>https://kaworu.github.io/octostrap3/blog/2013/10/02/pick-a-theme-for-only-one-page</id>
     <content type="html"><![CDATA[<div data-hide-me="one-page-theme-pick" class="alert alert-info">
     <p>
       <span class="glyphicon glyphicon-info-sign"></span>

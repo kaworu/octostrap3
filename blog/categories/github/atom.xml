@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Github | Octostrap3 demo]]></title>
-  <link href="http://kAworu.github.io/octostrap3/blog/categories/github/atom.xml" rel="self"/>
-  <link href="http://kAworu.github.io/octostrap3/"/>
-  <updated>2016-01-13T10:36:30+01:00</updated>
-  <id>http://kAworu.github.io/octostrap3/</id>
+  <link href="https://kaworu.github.io/octostrap3/blog/categories/github/atom.xml" rel="self"/>
+  <link href="https://kaworu.github.io/octostrap3/"/>
+  <updated>2016-04-22T15:34:30+02:00</updated>
+  <id>https://kaworu.github.io/octostrap3/</id>
   <author>
     <name><![CDATA[kAworu]]></name>
     
@@ -15,15 +15,15 @@
   
   <entry>
     <title type="html"><![CDATA[GitHub Page]]></title>
-    <link href="http://kAworu.github.io/octostrap3/blog/2013/11/23/github-page/"/>
+    <link href="https://kaworu.github.io/octostrap3/blog/2013/11/23/github-page/"/>
     <updated>2013-11-23T14:39:00+01:00</updated>
-    <id>http://kAworu.github.io/octostrap3/blog/2013/11/23/github-page</id>
-    <content type="html"><![CDATA[<p><img class="no-border pull-right" src="http://kAworu.github.io/octostrap3/images/GitHub-Mark.png" title="GitHub logo" alt="GitHub logo"></p>
+    <id>https://kaworu.github.io/octostrap3/blog/2013/11/23/github-page</id>
+    <content type="html"><![CDATA[<p><img class="no-border pull-right" src="https://kaworu.github.io/octostrap3/images/GitHub-Mark.png" title="GitHub logo" alt="GitHub logo"></p>
 
 
 
 
-<p>There is <a href="http://kAworu.github.io/octostrap3/github-page-example">a new &ldquo;GitHub Page&rdquo;</a> kinda like
+<p>There is <a href="https://kaworu.github.io/octostrap3/github-page-example">a new &ldquo;GitHub Page&rdquo;</a> kinda like
 the GitHub sidebar, but with more extensive informations.</p>
 
 

@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://kAworu.github.io/octostrap3/sitemap.xml 
+Sitemap: https://kaworu.github.io/octostrap3/sitemap.xml 
